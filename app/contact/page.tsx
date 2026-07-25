@@ -56,12 +56,15 @@ export default function ContactPage() {
       {/* 1. Hero Banner Image Frame (Matching Snapshot Header) */}
       <div className="relative w-full h-[220px] sm:h-[280px] md:h-[340px] overflow-hidden bg-slate-900">
         <Image
-          src="/contact-hero.png"
+          src="/contact-hero-clean.png"
           alt="Contact Us - Let's Have a Discussion"
           fill
           className="object-cover opacity-90 object-center"
           priority
         />
+
+
+
         {/* Subtle Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
 
