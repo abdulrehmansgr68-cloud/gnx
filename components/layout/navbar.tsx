@@ -10,8 +10,8 @@ import { ThemeToggle } from "@/components/layout/theme-toggle";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/#about" },
-  { name: "Solutions", href: "/#solutions" },
+  { name: "About Us", href: "/about" },
+  { name: "Solutions", href: "#" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -53,11 +53,10 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`transition-colors py-1 ${
-                    isActive
+                  className={`transition-colors py-1 ${isActive
                       ? "text-[#007b99] dark:text-cyan-400 font-extrabold border-b-2 border-[#007b99] dark:border-cyan-400"
                       : "text-slate-600 dark:text-slate-300 font-medium hover:text-[#007b99] dark:hover:text-cyan-400"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>

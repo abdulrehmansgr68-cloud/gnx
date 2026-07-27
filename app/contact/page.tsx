@@ -15,7 +15,9 @@ import {
   Download,
   ShieldCheck,
   User,
-  MessageSquare
+  MessageSquare,
+  AlertCircle,
+  Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,26 +36,111 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [touched, setTouched] = useState({
+    fullName: false,
+    email: false,
+    phone: false,
+    message: false,
+  });
+
+  const getFullNameError = (name: string) => {
+    const trimmed = name.trim();
+    if (!trimmed || !/^[a-zA-Z\s.-]{2,60}$/.test(trimmed)) {
+      return "Please enter a valid full name.";
+    }
+    return null;
+  };
+
+  const getEmailError = (emailStr: string) => {
+    const trimmed = emailStr.trim();
+    if (!trimmed) return "Email Address is required.";
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed)) {
+      return "Please enter a valid email address.";
+    }
+    return null;
+  };
+
+  const getPhoneError = (phoneStr: string) => {
+    const digits = phoneStr.replace(/\D/g, "");
+    if (!digits) return "Phone Number is required.";
+    if (!/^[6-9]\d{9}$/.test(digits)) {
+      return "Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.";
+    }
+    return null;
+  };
+
+  const getMessageError = (msgStr: string) => {
+    const trimmed = msgStr.trim();
+    if (!trimmed) return "Message is required.";
+    if (trimmed.length < 50) {
+      return `Message must be at least 50 characters (currently ${trimmed.length}/50).`;
+    }
+    return null;
+  };
+
+  const fieldErrors = {
+    fullName: touched.fullName ? getFullNameError(formData.fullName) : null,
+    email: touched.email ? getEmailError(formData.email) : null,
+    phone: touched.phone ? getPhoneError(formData.phone) : null,
+    message: touched.message ? getMessageError(formData.message) : null,
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage(null);
+
+    // Mark all fields as touched on submit
+    setTouched({ fullName: true, email: true, phone: true, message: true });
+
+    const nameErr = getFullNameError(formData.fullName);
+    const emailErr = getEmailError(formData.email);
+    const phoneErr = getPhoneError(formData.phone);
+    const msgErr = getMessageError(formData.message);
+
+    if (nameErr || emailErr || phoneErr || msgErr) {
+      setErrorMessage("Please fix the highlighted errors in the form before submitting.");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || "Failed to send message. Please try again.");
+      }
+
       setIsSubmitted(true);
-    }, 800);
+    } catch (err: any) {
+      setErrorMessage(
+        err.message || "An unexpected error occurred. Please try again later."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
     setFormData({ fullName: "", email: "", phone: "", message: "" });
+    setTouched({ fullName: false, email: false, phone: false, message: false });
+    setErrorMessage(null);
     setIsSubmitted(false);
   };
 
   return (
     <div className="min-h-screen bg-slate-50/50 dark:bg-slate-950 transition-colors duration-300">
-      {/* 1. Hero Banner Image Frame (Matching Snapshot Header) */}
+      {/* 1. Hero Banner Image Frame */}
       <div className="relative w-full h-[220px] sm:h-[280px] md:h-[340px] overflow-hidden bg-slate-900">
         <Image
           src="/contact-hero-clean.png"
@@ -62,8 +149,6 @@ export default function ContactPage() {
           className="object-cover opacity-90 object-center"
           priority
         />
-
-
 
         {/* Subtle Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
@@ -82,7 +167,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* 2. Main Section - Soft Cyan/Blue Tinted Backdrop */}
+      {/* 2. Main Section */}
       <div className="bg-[#e6f7fa]/70 dark:bg-slate-950/90 py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
@@ -155,8 +240,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-
-              {/* Mobile App Download Teaser Card - Light Glass Styling */}
+              {/* Mobile App Download Teaser Card */}
               <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-cyan-50/90 via-white to-[#e6f7fa] dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-cyan-500/30 shadow-xl relative overflow-hidden space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs font-extrabold text-[#007b99] dark:text-cyan-400 uppercase tracking-wider">
@@ -207,24 +291,41 @@ export default function ContactPage() {
                       </p>
                     </div>
 
+                    {errorMessage && (
+                      <div className="p-3.5 rounded-xl bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 text-xs sm:text-sm flex items-start gap-2.5 animate-in fade-in">
+                        <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                        <span>{errorMessage}</span>
+                      </div>
+                    )}
+
                     {/* Full Name */}
                     <div className="space-y-1.5">
                       <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <div className="relative">
-                        <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                        <User className={`w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors ${fieldErrors.fullName ? "text-red-500" : "text-slate-400"}`} />
                         <Input
                           required
                           type="text"
                           placeholder="Enter your full name"
                           value={formData.fullName}
+                          onBlur={() => setTouched((prev) => ({ ...prev, fullName: true }))}
                           onChange={(e) =>
                             setFormData({ ...formData, fullName: e.target.value })
                           }
-                          className="pl-10 h-12 rounded-xl border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm"
+                          className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.fullName
+                              ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                              : "border-slate-200 dark:border-slate-800"
+                            }`}
                         />
                       </div>
+                      {fieldErrors.fullName && (
+                        <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
+                          <AlertCircle className="w-3 h-3 shrink-0" />
+                          <span>{fieldErrors.fullName}</span>
+                        </p>
+                      )}
                     </div>
 
                     {/* Email Address */}
@@ -233,18 +334,28 @@ export default function ContactPage() {
                         Email Address <span className="text-red-500">*</span>
                       </label>
                       <div className="relative">
-                        <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                        <Mail className={`w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors ${fieldErrors.email ? "text-red-500" : "text-slate-400"}`} />
                         <Input
                           required
                           type="email"
                           placeholder="Enter your email address"
                           value={formData.email}
+                          onBlur={() => setTouched((prev) => ({ ...prev, email: true }))}
                           onChange={(e) =>
                             setFormData({ ...formData, email: e.target.value })
                           }
-                          className="pl-10 h-12 rounded-xl border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm"
+                          className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.email
+                              ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                              : "border-slate-200 dark:border-slate-800"
+                            }`}
                         />
                       </div>
+                      {fieldErrors.email && (
+                        <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
+                          <AlertCircle className="w-3 h-3 shrink-0" />
+                          <span>{fieldErrors.email}</span>
+                        </p>
+                      )}
                     </div>
 
                     {/* Phone Number */}
@@ -252,39 +363,67 @@ export default function ContactPage() {
                       <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
                         Phone Number <span className="text-red-500">*</span>
                       </label>
-                      <div className="relative">
-                        <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                      <div className="relative flex items-center">
+                        <div className="absolute left-3 flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-bold text-xs select-none border-r border-slate-200 dark:border-slate-800 pr-2.5 z-10 pointer-events-none">
+                          <span className="text-sm">🇮🇳</span>
+                          <span>+91</span>
+                        </div>
                         <Input
                           required
                           type="tel"
-                          placeholder="Enter 10-digit mobile number"
+                          maxLength={10}
+                          placeholder="98765 43210"
                           value={formData.phone}
-                          onChange={(e) =>
-                            setFormData({ ...formData, phone: e.target.value })
-                          }
-                          className="pl-10 h-12 rounded-xl border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm"
+                          onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
+                          onChange={(e) => {
+                            const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                            setFormData({ ...formData, phone: val });
+                          }}
+                          className={`pl-20 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm font-medium tracking-wide ${fieldErrors.phone
+                              ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                              : "border-slate-200 dark:border-slate-800"
+                            }`}
                         />
                       </div>
+                      {fieldErrors.phone && (
+                        <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
+                          <AlertCircle className="w-3 h-3 shrink-0" />
+                          <span>{fieldErrors.phone}</span>
+                        </p>
+                      )}
                     </div>
 
                     {/* Message / Requirement */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
-                        Your Message / Requirement <span className="text-red-500">*</span>
-                      </label>
+                      <div className="flex items-center justify-between">
+                        <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
+                          Your Message / Requirement <span className="text-red-500">*</span>
+                        </label>
+
+                      </div>
                       <div className="relative">
-                        <MessageSquare className="w-4 h-4 text-slate-400 absolute left-3.5 top-4" />
+                        <MessageSquare className={`w-4 h-4 absolute left-3.5 top-4 transition-colors ${fieldErrors.message ? "text-red-500" : "text-slate-400"}`} />
                         <Textarea
                           required
                           rows={4}
-                          placeholder="Describe your solar requirement, capacity (kW), or partnership details..."
+                          placeholder="Describe your solar requirement, capacity (kW), or partnership details (at least 50 characters required)..."
                           value={formData.message}
+                          onBlur={() => setTouched((prev) => ({ ...prev, message: true }))}
                           onChange={(e) =>
                             setFormData({ ...formData, message: e.target.value })
                           }
-                          className="pl-10 rounded-xl border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm resize-none"
+                          className={`pl-10 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm resize-none ${fieldErrors.message
+                              ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                              : "border-slate-200 dark:border-slate-800"
+                            }`}
                         />
                       </div>
+                      {fieldErrors.message && (
+                        <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
+                          <AlertCircle className="w-3 h-3 shrink-0" />
+                          <span>{fieldErrors.message}</span>
+                        </p>
+                      )}
                     </div>
 
                     {/* Submit Button */}
@@ -294,7 +433,10 @@ export default function ContactPage() {
                       className="w-full bg-gradient-to-r from-[#007b99] via-[#015C8F] to-[#007b99] hover:opacity-95 text-white font-extrabold rounded-xl h-13 text-base shadow-xl shadow-cyan-500/20 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 mt-2"
                     >
                       {isSubmitting ? (
-                        <span>Submitting Inquiry...</span>
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Sending Inquiry...</span>
+                        </>
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
@@ -370,7 +512,6 @@ export default function ContactPage() {
                     </button>
                   </div>
                 )}
-
 
               </div>
             </div>
