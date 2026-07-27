@@ -16,7 +16,7 @@ export function TrustCredibilitySection() {
             Why Hundreds of Solar Buyers Trust GNX
           </h2>
           <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
-            Certified equipment, transparent billing, and dedicated engineering installation teams across Uttar Pradesh.
+            Certified equipment, transparent billing, and dedicated engineering installation teams on a Pan India Base.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export function TrustCredibilitySection() {
             </div>
             <h3 className="text-xl font-bold text-white">Certified & Compliant</h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              All products meet strict BIS, MNRE, and UPNEDA quality standards and qualify for government subsidy schemes under PM Surya Ghar.
+              All products meet strict BIS and MNRE quality standards and qualify for government subsidy schemes under PM Surya Ghar.
             </p>
           </div>
 
@@ -48,9 +48,9 @@ export function TrustCredibilitySection() {
             <div className="p-3.5 rounded-2xl bg-emerald-500/10 text-emerald-400 w-fit">
               <MapPin className="w-7 h-7" />
             </div>
-            <h3 className="text-xl font-bold text-white">Installations Across UP</h3>
+            <h3 className="text-xl font-bold text-white">Installations Pan India Base</h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Serving residential rooftop owners, commercial factories, and verified B2B vendors across major hubs in Uttar Pradesh.
+              Serving residential rooftop owners, commercial factories, and verified B2B vendors across major hubs on a Pan India Base.
             </p>
           </div>
         </div>

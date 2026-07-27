@@ -11,7 +11,7 @@ export function HeroImage() {
       {/* Main Clean Showcase Banner Frame */}
       <div className="relative w-full h-full rounded-3xl overflow-hidden border border-slate-200/90 dark:border-slate-800 shadow-xl group">
         <Image
-          src="/hero_ecommerce.png"
+          src="/bg-image.png"
           alt="GNX Solar E-Commerce Store"
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-700"

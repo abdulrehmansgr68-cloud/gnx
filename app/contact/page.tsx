@@ -113,7 +113,7 @@ export default function ContactPage() {
                       Office Address
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 leading-normal font-medium">
-                      3rd Kirti Tower, Tech Zone IV, Amrapali Dream Valley, Greater Noida, Uttar Pradesh
+                      3rd Floor Kirti Tower, Plot no 12 and 13C, Tech Zone-IV, Amarpali Dream Valley, Greater Noida West 201306
                     </p>
                   </div>
                 </div>
@@ -128,10 +128,10 @@ export default function ContactPage() {
                       Email Support
                     </h3>
                     <a
-                      href="mailto:support@gnxpowersolution.com"
+                      href="mailto:info@gnxpowersolution.com"
                       className="text-xs sm:text-sm text-[#007b99] dark:text-cyan-400 font-semibold hover:underline mt-1 block"
                     >
-                      support@gnxpowersolution.com
+                      info@gnxpowersolution.com
                     </a>
                   </div>
                 </div>

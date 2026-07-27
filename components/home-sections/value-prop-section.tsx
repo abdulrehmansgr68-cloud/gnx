@@ -9,9 +9,9 @@ const PROPOSITIONS = [
   },
   {
     icon: <Wrench className="w-6 h-6 text-emerald-500" />,
-    title: "End-to-End Installation Services pan UP",
+    title: "End-to-End Installation Services - Pan India Base",
     description:
-      "Our vetted, trained technicians handle everything across Uttar Pradesh: site assessment, design, permits, installation, and grid connection.",
+      "Our vetted, trained technicians handle everything across Pan India Base: site assessment, design, permits, installation, and grid connection.",
   },
   {
     icon: <BadgePercent className="w-6 h-6 text-amber-500" />,
@@ -40,7 +40,7 @@ export function ValuePropSection() {
             The Ultimate Solar Advantage
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
-            We simplify solar energy adoption with certified hardware, pan-UP installation, and complete government subsidy assistance.
+            We simplify solar energy adoption with certified hardware, Pan India Base installation, and complete government subsidy assistance.
           </p>
         </div>
 

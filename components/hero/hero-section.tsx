@@ -4,18 +4,18 @@ import { HeroBottomBanner } from "./hero-bottom-banner";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full min-h-[calc(100vh-4.5rem)] flex flex-col justify-between overflow-hidden bg-slate-50 dark:bg-slate-950 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-3 transition-colors duration-300">
+    <section className="relative w-full h-[calc(100vh-4rem)] min-h-[580px] flex flex-col justify-between overflow-hidden bg-slate-50 dark:bg-slate-950 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 pb-3 transition-colors duration-300">
       {/* Background Image & Soft White Wash Overlay - Exact Snapshot Match */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="/unnamed.jpg"
+          src="/bg-image.png"
           alt="Home Energy Ecosystem"
           fill
-          className="object-cover"
+          className="object-cover opacity-100"
           priority
         />
-        {/* Soft White Wash Overlay matching reference snapshot exactly */}
-        <div className="absolute inset-0 bg-white/70 dark:bg-slate-950/85 backdrop-blur-[2px]" />
+        {/* Soft Wash Overlay for rich background visibility */}
+        <div className="absolute inset-0 bg-white/25 dark:bg-slate-950/50 backdrop-blur-[1px]" />
       </div>
 
       {/* Main Centered Content Container */}

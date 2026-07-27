@@ -24,10 +24,10 @@ export function Footer() {
 
           <div className="text-xs text-slate-500 dark:text-slate-400 space-y-1 pt-1">
             <p className="font-semibold text-slate-800 dark:text-slate-200">GNX Power Solution</p>
-            <p>3rd Kirti Tower, Tech Zone IV, Amrapali Dream Valley,</p>
-            <p>Greater Noida, Uttar Pradesh</p>
+            <p>3rd Floor Kirti Tower, Plot no 12 and 13C, Tech Zone-IV,</p>
+            <p>Amarpali Dream Valley, Greater Noida West 201306</p>
             <p className="pt-1">
-              Email: <a href="mailto:support@gnxpowersolution.com" className="text-[#007b99] dark:text-cyan-400 font-medium hover:underline">support@gnxpowersolution.com</a>
+              Email: <a href="mailto:info@gnxpowersolution.com" className="text-[#007b99] dark:text-cyan-400 font-medium hover:underline">info@gnxpowersolution.com</a>
             </p>
             <p>
               Phone: <a href="tel:+919871305921" className="text-slate-800 dark:text-slate-200 font-bold hover:underline">+91-9871305921</a>

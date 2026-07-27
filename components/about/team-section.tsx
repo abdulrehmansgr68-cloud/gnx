@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 
 const executive = {
   name: "Mr. Neeraj Chauhan",
-  role: "Chief Executive Officer (CEO)",
-  experience: "25+ Years Experience",
+  role: "Chief Executive Officer",
+  experience: "15+ Years Experience",
   bio: "A visionary leader with a proven track record of driving innovation, building high-performing teams, and delivering sustainable business success with a strong customer-centric approach.",
   image: "/team/image_2.png",
   highlights: [

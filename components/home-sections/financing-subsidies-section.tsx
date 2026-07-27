@@ -27,7 +27,7 @@ export function FinancingSubsidiesSection() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Easy EMI Options</h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                Flexible solar loan tenure up to 60 months with EMIs starting at <span className="font-extrabold text-[#007b99]">₹2,499/month</span> and 0% down payment options.
+                Flexible solar loan tenure up to 60 months with attractive EMIs and 0% down payment options.
               </p>
             </div>
             {/* <Link href="/contact" className="pt-2 block">
@@ -45,7 +45,7 @@ export function FinancingSubsidiesSection() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Govt Subsidy Assistance</h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                Complete assistance with Central PM Surya Ghar & UPNEDA state government subsidy applications (get up to ₹78,000 direct subsidy).
+                Complete assistance with Central PM Surya Ghar & state government subsidy applications.
               </p>
             </div>
             {/* <Link href="/contact" className="pt-2 block">

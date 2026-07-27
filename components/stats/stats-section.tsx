@@ -1,7 +1,7 @@
 import React from 'react';
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
+  { value: "15+", label: "Years Experience" },
   { value: "10,000+", label: "Happy Customers" },
   { value: "750+", label: "Commercial Projects" },
   { value: "50 MW+", label: "Installed Capacity" },

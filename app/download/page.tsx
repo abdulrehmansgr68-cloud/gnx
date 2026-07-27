@@ -22,7 +22,7 @@ const APP_FEATURES = [
   {
     icon: <Zap className="w-6 h-6 text-amber-500" />,
     title: "Direct Factory Prices",
-    description: "Access wholesale rates on Tier-1 solar panels, hybrid inverters & lithium storage batteries.",
+    description: "Access competitive rates on Tier-1 solar panels, hybrid inverters & lithium storage batteries.",
     bgColor: "bg-amber-50 dark:bg-amber-950/60",
   },
   {

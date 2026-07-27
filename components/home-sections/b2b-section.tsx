@@ -15,7 +15,7 @@ export function B2bSection() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-            Power Your Enterprise with B2B Wholesale Solar
+            Power Your Enterprise with B2B Solar Solutions
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
