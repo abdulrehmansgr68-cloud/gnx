@@ -19,7 +19,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-hidden">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-hidden">
       <div className="w-full flex h-16 items-center justify-between">
         {/* Full-height Logo Banner with Slanted Right Edge */}
         <div

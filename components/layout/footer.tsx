@@ -11,13 +11,20 @@ export function Footer() {
         
         {/* Column 1: Brand & Social */}
         <div className="flex flex-col space-y-5 lg:col-span-2">
-          <Image 
-            src="/app_logo.svg" 
-            alt="GNX Power Solution" 
-            width={180} 
-            height={60} 
-            className="dark:invert"
-          />
+          <div
+            className="w-fit flex items-center px-4 py-2 shadow-md rounded-xl"
+            style={{
+              background: "linear-gradient(90deg, #02438A 0%, #029FC8 100%)",
+            }}
+          >
+            <Image 
+              src="/logo.svg" 
+              alt="GNX Power Solution" 
+              width={160} 
+              height={40} 
+              className="h-9 w-auto"
+            />
+          </div>
           <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
             India's trusted online platform for solar panels, hardware, and professional installation. From your first click to full power — we make going solar simple.
           </p>
