@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-white dark:bg-slate-950 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-100 dark:border-slate-800">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
-        
+
         {/* Column 1: Brand & Social */}
         <div className="flex flex-col space-y-5 lg:col-span-2">
           <div
@@ -17,11 +17,11 @@ export function Footer() {
               background: "linear-gradient(90deg, #02438A 0%, #029FC8 100%)",
             }}
           >
-            <Image 
-              src="/logo.svg" 
-              alt="GNX Power Solution" 
-              width={160} 
-              height={40} 
+            <Image
+              src="/logo.svg"
+              alt="GNX Power Solution"
+              width={160}
+              height={40}
               className="h-9 w-auto"
             />
           </div>
@@ -42,16 +42,16 @@ export function Footer() {
           </div>
 
           <div className="flex space-x-3 pt-2">
-            <a 
-              href="https://www.facebook.com/gnxpowersolution" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.facebook.com/gnxpowersolution"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-sm"
             >
               <FaFacebookF className="h-4 w-4" />
             </a>
-            <a 
+            {/* <a 
               href="https://twitter.com" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -59,20 +59,20 @@ export function Footer() {
               className="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
             >
               <FaTwitter className="h-4 w-4" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/company/gnx-power-solution/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            </a> */}
+            <a
+              href="https://www.linkedin.com/company/gnx-power-solution/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="w-9 h-9 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
             >
               <FaLinkedinIn className="h-4 w-4" />
             </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.instagram.com/gnxpowersolution"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-sm"
             >
@@ -104,10 +104,10 @@ export function Footer() {
         <div className="flex flex-col space-y-4">
           <h3 className="text-base font-bold text-slate-900 dark:text-white">Newsletter</h3>
           <div className="flex flex-col space-y-2.5">
-            <Input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="h-10 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-xs" 
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              className="h-10 bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-xs"
             />
             <Button className="h-10 w-full bg-[#007b99] hover:bg-[#005266] text-white font-bold text-xs shadow-sm">
               Subscribe
@@ -123,9 +123,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
         <p>© {new Date().getFullYear()} GNX Power Solution. All rights reserved.</p>
         <div className="flex gap-6">
-          <Link href="/contact" className="hover:text-slate-600 dark:hover:text-slate-300">Terms of Service</Link>
           <Link href="/contact" className="hover:text-slate-600 dark:hover:text-slate-300">Privacy Policy</Link>
-          <Link href="/contact" className="hover:text-slate-600 dark:hover:text-slate-300">Refund Policy</Link>
         </div>
       </div>
     </footer>
