@@ -6,7 +6,7 @@ export function B2bSection() {
   return (
     <section className="py-20 bg-slate-900 text-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+
         {/* Left Column Text */}
         <div className="lg:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold text-xs uppercase tracking-wider">
@@ -29,7 +29,7 @@ export function B2bSection() {
             </div>
             <div className="flex items-center gap-3 text-sm text-slate-200">
               <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
-              <span>Turnkey EPC Execution with 25-Year Performance Guarantees</span>
+              <span>Turnkey EPC Execution with 15-Year Performance Guarantees</span>
             </div>
             <div className="flex items-center gap-3 text-sm text-slate-200">
               <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />

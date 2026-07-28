@@ -11,7 +11,7 @@ import { ThemeToggle } from "@/components/layout/theme-toggle";
 const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Solutions", href: "#" },
+  { name: "Solutions", href: "/solutions" },
   { name: "Contact", href: "/contact" },
 ];
 

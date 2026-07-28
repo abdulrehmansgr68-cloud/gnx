@@ -123,7 +123,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
         <p>© {new Date().getFullYear()} GNX Power Solution. All rights reserved.</p>
         <div className="flex gap-6">
-          <Link href="/contact" className="hover:text-slate-600 dark:hover:text-slate-300">Privacy Policy</Link>
+          <Link href="/privacy-policy" className="hover:text-slate-600 dark:hover:text-slate-300">Privacy Policy</Link>
         </div>
       </div>
     </footer>
