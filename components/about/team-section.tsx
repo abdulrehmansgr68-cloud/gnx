@@ -45,7 +45,7 @@ const managers = [
     image: "/team/image_7.png",
   },
   {
-    name: "Mrs. Sapna Pandey",
+    name: "Sapna Pandey",
     role: "HR Operations",
     experience: "5+ Years",
     bio: "Specializes in recruitment, employee engagement, and HR administration, creating a highly productive work environment.",

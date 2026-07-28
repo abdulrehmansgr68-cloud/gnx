@@ -35,9 +35,8 @@ export function HeroBottomBanner() {
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center justify-center ${
-                index !== 0 ? "lg:pl-4 pt-2 lg:pt-0" : ""
-              }`}
+              className={`flex flex-col items-center justify-center ${index !== 0 ? "lg:pl-4 pt-2 lg:pt-0" : ""
+                }`}
             >
               <div
                 className={`${metric.iconBg} p-2 rounded-xl flex items-center justify-center mb-1.5 shadow-sm`}

@@ -27,7 +27,7 @@ export function FinancingSubsidiesSection() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Easy EMI Options</h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
-                Flexible solar loan tenure up to 60 months with attractive EMIs and 0% down payment options.
+                Flexible financing solutions and customized installment plans tailored to fit your energy budget.
               </p>
             </div>
             {/* <Link href="/contact" className="pt-2 block">
