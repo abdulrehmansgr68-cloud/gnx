@@ -4,10 +4,26 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Smartphone } from "lucide-react";
 
+const SHOP_LINKS = [
+  { label: "Solar Panels", href: "/contact" },
+  { label: "Inverters", href: "/contact" },
+  { label: "Batteries & Storage", href: "/contact" },
+  { label: "Rooftop Kits", href: "/contact" },
+  { label: "Accessories & Spares", href: "/contact" },
+];
+
+const SERVICES_LINKS = [
+  { label: "Solar Installation", href: "/contact" },
+  { label: "Maintenance & AMC", href: "/contact" },
+  { label: "Subsidy Assistance", href: "/contact" },
+  { label: "Mobile App", href: "/download", fontSemibold: true },
+  { label: "Contact Support", href: "/contact", fontSemibold: true },
+];
+
 export function Footer() {
   return (
     <footer className="w-full max-w-full overflow-x-hidden bg-white dark:bg-slate-950 pt-10 pb-8 pl-4 sm:pl-6 lg:pl-10 pr-4 sm:pr-6 lg:pr-8 border-t border-slate-100 dark:border-slate-800">
-      <div className="w-full mx-auto grid grid-cols md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
 
         {/* Column 1: Brand & Social */}
         <div className="flex flex-col space-y-4">
@@ -73,45 +89,36 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="md:hidden flex justify-between items-center">
+        {/* Columns 2 & 3: Shop and Services & Support */}
+        <div className="grid grid-cols-2 gap-6 lg:gap-8 md:col-span-1 lg:col-span-2 md:pl-6 lg:pl-10">
           {/* Column 2: Shop */}
           <div className="flex flex-col space-y-3">
             <h3 className="text-base font-bold text-slate-900 dark:text-white">Shop</h3>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Solar Panels</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Inverters</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Batteries & Storage</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Rooftop Kits</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Accessories & Spares</Link>
+            {SHOP_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="w-fit text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Column 3: Services & Support */}
           <div className="flex flex-col space-y-3">
             <h3 className="text-base font-bold text-slate-900 dark:text-white">Services & Support</h3>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Solar Installation</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Maintenance & AMC</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Subsidy Assistance</Link>
-            <Link href="/download" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold">Mobile App</Link>
-            <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold">Contact Support</Link>
+            {SERVICES_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`w-fit text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm ${link.fontSemibold ? "font-semibold" : ""
+                  }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
-        </div>
-
-        <div className="hidden md:flex flex-col space-y-3">
-          <h3 className="text-base font-bold text-slate-900 dark:text-white">Shop</h3>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Solar Panels</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Inverters</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Batteries & Storage</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Rooftop Kits</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Accessories & Spares</Link>
-        </div>
-
-        {/* Column 3: Services & Support */}
-        <div className="hidden md:flex flex-col space-y-3">
-          <h3 className="text-base font-bold text-slate-900 dark:text-white">Services & Support</h3>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Solar Installation</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Maintenance & AMC</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm">Subsidy Assistance</Link>
-          <Link href="/download" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold">Mobile App</Link>
-          <Link href="/contact" className="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm font-semibold">Contact Support</Link>
         </div>
         {/* Column 4: Download App & QR Code */}
         <div className="flex flex-col space-y-3">
@@ -120,23 +127,17 @@ export function Footer() {
             Scan QR code with your mobile camera to download the GNX app.
           </p>
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.gnx.powersolution&hl=en_IN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block w-fit p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs hover:shadow-md hover:border-[#007b99] transition-all"
-            aria-label="Google Play Store QR Code"
-          >
+          <div className="w-fit p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs">
             <div className="relative w-28 h-28 mx-auto bg-white p-1.5 rounded-lg overflow-hidden">
               <Image
                 src="/playstore-qr.png"
                 alt="GNX Power Solution Play Store QR Code"
                 width={112}
                 height={112}
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
+                className="w-full h-full object-contain"
               />
             </div>
-          </a>
+          </div>
           <div className="flex pt-4">
             <Link href="/privacy-policy" className="text-sm underline font-semibold hover:text-primary dark:hover:text-slate-300 transition-colors">Privacy Policy</Link>
           </div>
@@ -144,12 +145,10 @@ export function Footer() {
 
       </div>
 
-      <div className="w-full text-text-primary mx-auto mt-8 pt-4 border-t border-slate-300 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-[0.9rem] gap-3">
+      <div className="w-full text-text-primary mx-auto mt-8 pt-4 border-t border-slate-300 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-[0.9rem] gap-4">
         <div className="flex flex-wrap items-center gap-3 sm:gap-4">
           <span className="text-text-primary">© 2026 GNX Power Solution. All Rights Reserved.</span>
         </div>
-
-
         <p className="font-medium">
           By{" "}
           <a

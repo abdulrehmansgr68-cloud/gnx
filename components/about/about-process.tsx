@@ -48,10 +48,10 @@ const PROCESS_STEPS = [
 
 export function AboutProcess() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <section className="py-12 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
+        <div className="text-center max-w-5xl mx-auto space-y-3">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Our End-to-End <span className="text-[#039BC5] dark:text-cyan-400">Execution Process</span>
           </h2>
@@ -69,7 +69,7 @@ export function AboutProcess() {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
+                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
                     {item.icon}
                   </div>
                   <span className="text-3xl font-bold text-slate-200 dark:text-slate-800 group-hover:text-[#039BC5]/30 transition-colors">

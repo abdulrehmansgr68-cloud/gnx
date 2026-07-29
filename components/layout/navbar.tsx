@@ -173,27 +173,20 @@ export function Navbar() {
               </p>
 
               {/* QR Code Container */}
-              <a
-                href="https://play.google.com/store/apps/details?id=com.gnx.powersolution&hl=en_IN"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
-                className="group block p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs hover:border-[#007b99] transition-all text-center"
-                aria-label="Google Play Store QR Code"
-              >
+              <div className="p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs text-center">
                 <div className="relative w-24 h-24 mx-auto bg-white p-1.5 rounded-lg overflow-hidden">
                   <Image
                     src="/playstore-qr.png"
                     alt="GNX Power Solution Play Store QR Code"
                     width={96}
                     height={96}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <span className="block text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-medium">
                   Scan to Download App
                 </span>
-              </a>
+              </div>
 
               <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full">
                 <Button className="w-full text-md p-5 rounded-full bg-primary hover:bg-primary/90 shadow-md cursor-pointer font-bold">

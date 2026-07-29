@@ -2,10 +2,10 @@ import { ShoppingCart, Building, Handshake, CheckCircle } from "lucide-react";
 
 export function AboutWhatWeDo() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section className="py-12 md:py-14 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
-        <div className="space-y-4 max-w-3xl">
+        <div className="space-y-4 max-w-5xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider">
             ⚡ What We Do
           </div>

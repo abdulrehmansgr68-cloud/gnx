@@ -14,7 +14,7 @@ const SECTORS = [
     badge: "For Homes & Villas",
     icon: Home,
     color: "from-cyan-500 to-blue-600",
-    lightBg: "bg-cyan-50 dark:bg-cyan-950/30",
+    lightBg: "bg-cyan-100 dark:bg-cyan-950/30",
     borderColor: "border-cyan-200 dark:border-cyan-800",
     accentColor: "text-[#039BC5] dark:text-cyan-400",
     description:
@@ -41,7 +41,7 @@ const SECTORS = [
     badge: "For Businesses & Establishments",
     icon: Building2,
     color: "from-amber-500 to-orange-600",
-    lightBg: "bg-amber-50 dark:bg-amber-950/30",
+    lightBg: "bg-amber-100 dark:bg-amber-950/30",
     borderColor: "border-amber-200 dark:border-amber-800",
     accentColor: "text-amber-600 dark:text-amber-400",
     description:
@@ -68,7 +68,7 @@ const SECTORS = [
     badge: "For Heavy Power Consumers",
     icon: Factory,
     color: "from-emerald-500 to-teal-600",
-    lightBg: "bg-emerald-50 dark:bg-emerald-950/30",
+    lightBg: "bg-emerald-100 dark:bg-emerald-950/30",
     borderColor: "border-emerald-200 dark:border-emerald-800",
     accentColor: "text-emerald-600 dark:text-emerald-400",
     description:

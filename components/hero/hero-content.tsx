@@ -53,7 +53,7 @@ export function HeroContent() {
       <div className="flex flex-row items-center justify-center gap-3 pt-2">
         {/* Pill 1 */}
         <div className="flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200/90 dark:border-slate-800 shadow-md backdrop-blur-md">
-          <div className="p-2 rounded-lg bg-cyan-200 dark:bg-cyan-950/60 text-[#007b99] dark:text-cyan-400">
+          <div className="p-2 rounded-lg bg-cyan-100 dark:bg-cyan-950/60 text-[#007b99] dark:text-cyan-400">
             <ShieldCheck className="w-4 h-4" />
           </div>
           <div className="text-left">
@@ -64,7 +64,7 @@ export function HeroContent() {
 
         {/* Pill 2 */}
         <div className="flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200/90 dark:border-slate-800 shadow-md backdrop-blur-md">
-          <div className="p-2 rounded-lg bg-amber-200 dark:bg-amber-950/60 text-[#8a6d1c] dark:text-amber-400">
+          <div className="p-2 rounded-lg bg-amber-100 dark:bg-amber-950/60 text-[#8a6d1c] dark:text-amber-400">
             <Leaf className="w-4 h-4 fill-[#8a6d1c]/20" />
           </div>
           <div className="text-left">

@@ -164,10 +164,10 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl relative">
+    <div className="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl relative min-h-full flex flex-col justify-between">
       {!isSubmitted ? (
         /* --- Lead Generation Form --- */
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4 flex flex-col justify-between flex-1 min-h-full">
           <div>
             <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white">
               Send a Message
@@ -178,6 +178,7 @@ export function ContactForm() {
             </p>
           </div>
 
+          {/* Top Error Alert Banner */}
           {errorMessage && (
             <div className="p-3.5 rounded-xl bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 text-xs sm:text-sm flex items-start gap-2.5 animate-in fade-in">
               <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
@@ -200,7 +201,7 @@ export function ContactForm() {
           </div>
 
           {/* Full Name */}
-          <div className="space-y-1.5">
+          <div className="space-y-1">
             <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
               Full Name <span className="text-red-500">*</span>
             </label>
@@ -220,22 +221,24 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, fullName: e.target.value })
                 }
-                className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.fullName
+                className={`pl-10 h-11 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.fullName
                   ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
                   : "border-slate-200 dark:border-slate-800"
                   }`}
               />
             </div>
-            {fieldErrors.fullName && (
-              <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
-                <AlertCircle className="w-3 h-3 shrink-0" />
-                <span>{fieldErrors.fullName}</span>
-              </p>
-            )}
+            <div className="min-h-[20px] pt-0.5">
+              {fieldErrors.fullName && (
+                <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 animate-in fade-in">
+                  <AlertCircle className="w-3 h-3 shrink-0" />
+                  <span>{fieldErrors.fullName}</span>
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Email Address */}
-          <div className="space-y-1.5">
+          <div className="space-y-1">
             <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
               Email Address <span className="text-red-500">*</span>
             </label>
@@ -253,22 +256,24 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.email
+                className={`pl-10 h-11 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.email
                   ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
                   : "border-slate-200 dark:border-slate-800"
                   }`}
               />
             </div>
-            {fieldErrors.email && (
-              <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
-                <AlertCircle className="w-3 h-3 shrink-0" />
-                <span>{fieldErrors.email}</span>
-              </p>
-            )}
+            <div className="min-h-[20px] pt-0.5">
+              {fieldErrors.email && (
+                <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 animate-in fade-in">
+                  <AlertCircle className="w-3 h-3 shrink-0" />
+                  <span>{fieldErrors.email}</span>
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Phone Number */}
-          <div className="space-y-1.5">
+          <div className="space-y-1">
             <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
               Phone Number <span className="text-red-500">*</span>
             </label>
@@ -288,30 +293,32 @@ export function ContactForm() {
                   const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                   setFormData({ ...formData, phone: val });
                 }}
-                className={`pl-20 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm font-medium tracking-wide ${fieldErrors.phone
+                className={`pl-20 h-11 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm font-medium tracking-wide ${fieldErrors.phone
                   ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
                   : "border-slate-200 dark:border-slate-800"
                   }`}
               />
             </div>
-            {fieldErrors.phone && (
-              <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
-                <AlertCircle className="w-3 h-3 shrink-0" />
-                <span>{fieldErrors.phone}</span>
-              </p>
-            )}
+            <div className="min-h-[20px] pt-0.5">
+              {fieldErrors.phone && (
+                <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 animate-in fade-in">
+                  <AlertCircle className="w-3 h-3 shrink-0" />
+                  <span>{fieldErrors.phone}</span>
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Message / Requirement */}
-          <div className="space-y-1.5">
+          <div className="space-y-1 flex-1 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
                 Your Message / Requirement <span className="text-red-500">*</span>
               </label>
             </div>
-            <div className="relative">
+            <div className="relative flex-1 flex flex-col">
               <MessageSquare
-                className={`w-4 h-4 absolute left-3.5 top-4 transition-colors ${fieldErrors.message ? "text-red-500" : "text-slate-400"
+                className={`w-4 h-4 absolute left-3.5 top-3.5 transition-colors z-10 ${fieldErrors.message ? "text-red-500" : "text-slate-400"
                   }`}
               />
               <Textarea
@@ -325,18 +332,20 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className={`pl-10 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm resize-none ${fieldErrors.message
+                className={`pl-10 min-h-[95px] flex-1 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm resize-none ${fieldErrors.message
                   ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
                   : "border-slate-200 dark:border-slate-800"
                   }`}
               />
             </div>
-            {fieldErrors.message && (
-              <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 mt-1 animate-in fade-in">
-                <AlertCircle className="w-3 h-3 shrink-0" />
-                <span>{fieldErrors.message}</span>
-              </p>
-            )}
+            <div className="min-h-[20px] pt-0.5">
+              {fieldErrors.message && (
+                <p className="text-[11px] font-semibold text-red-500 flex items-center gap-1.5 animate-in fade-in">
+                  <AlertCircle className="w-3 h-3 shrink-0" />
+                  <span>{fieldErrors.message}</span>
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Submit Button */}

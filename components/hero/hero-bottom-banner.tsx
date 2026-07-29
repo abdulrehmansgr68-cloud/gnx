@@ -5,25 +5,25 @@ const metrics = [
     icon: <Sun className="h-5 w-5 text-green-700 dark:text-green-400" />,
     value: "50MW+",
     label: "Solar Panels Installed",
-    iconBg: "bg-green-200 dark:bg-green-950/60",
+    iconBg: "bg-green-100 dark:bg-green-950/60",
   },
   {
     icon: <BatteryCharging className="h-5 w-5 text-amber-600 dark:text-amber-400" />,
     value: "20MWh+",
     label: "Energy Stored Daily",
-    iconBg: "bg-amber-200 dark:bg-amber-950/60",
+    iconBg: "bg-amber-100 dark:bg-amber-950/60",
   },
   {
     icon: <Sliders className="h-5 w-5 text-orange-600 dark:text-orange-400" />,
     value: "Smart",
     label: "Hybrid Inverter Tech",
-    iconBg: "bg-orange-200 dark:bg-orange-950/60",
+    iconBg: "bg-orange-100 dark:bg-orange-950/60",
   },
   {
     icon: <Award className="h-5 w-5 text-blue-600 dark:text-blue-400" />,
     value: "Tier 1",
     label: "Certified Quality",
-    iconBg: "bg-blue-200 dark:bg-blue-950/60",
+    iconBg: "bg-blue-100 dark:bg-blue-950/60",
   },
 ];
 

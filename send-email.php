@@ -312,10 +312,9 @@ $safeEmail = escapeHtml($email);
 $safePhone = escapeHtml($formattedPhone);
 $safeMessage = nl2br(escapeHtml($message));
 
-$dateTime = date(
-    'd M Y, h:i A'
-);
+$dateTime = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
 
+$formattedDateTime = $dateTime->format('d M Y, h:i A');
 // ---------------------------------------------------------
 // Email HTML
 // ---------------------------------------------------------
@@ -498,7 +497,7 @@ font-size:12px;
 color:#64748b;
 font-weight:500;
 ">
-{$dateTime}
+{$formattedDateTime}
 </td>
 </tr>
 
@@ -620,8 +619,8 @@ try {
     $mail->Password = $config['password'];
 
     // Port 587 = STARTTLS
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    
     $mail->Port = (int) $config['port'];
 
     // Connection timeout

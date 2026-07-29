@@ -58,9 +58,9 @@ export default function ContactPage() {
       {/* 2. Main Section */}
       <div className="bg-[#e6f7fa]/70 dark:bg-slate-950/90 py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-            {/* Left Side: Contact Information & App Teaser */}
-            <div className="lg:col-span-5 space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+           {/* Left Side: Contact Information & App Teaser */}
+            <div className="lg:col-span-5 h-full flex flex-col justify-between space-y-6">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                   Let&apos;s Start a{" "}
@@ -128,7 +128,7 @@ export default function ContactPage() {
               </div>
 
               {/* Mobile App Download Teaser Card */}
-              <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-cyan-50/90 via-white to-[#e6f7fa] dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-cyan-500/30 shadow-xl relative overflow-hidden space-y-3">
+              <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-cyan-50/90 via-white to-[#e6f7fa] dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border border-cyan-500/30 shadow-xl relative overflow-hidden space-y-3 mt-auto">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs font-extrabold text-[#007b99] dark:text-cyan-400 uppercase tracking-wider">
                     <Smartphone className="w-4.5 h-4.5 text-[#007b99] dark:text-cyan-400" />
@@ -162,10 +162,10 @@ export default function ContactPage() {
             </div>
 
             {/* Right Side: Interactive Client Contact Form */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 h-full">
               <ContactForm />
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     </div>

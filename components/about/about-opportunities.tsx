@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function AboutOpportunities() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -24,7 +24,7 @@ export function AboutOpportunities() {
           {/* For Customers */}
           <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col justify-between space-y-6 group hover:border-[#039BC5]/50 transition-all duration-300">
             <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-cyan-50 dark:bg-cyan-950 text-[#039BC5] dark:text-cyan-400 w-fit">
+              <div className="p-3.5 rounded-2xl bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] dark:text-cyan-400 w-fit">
                 <UserCheck className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
@@ -44,7 +44,7 @@ export function AboutOpportunities() {
           {/* For Sellers / Manufacturers */}
           <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col justify-between space-y-6 group hover:border-amber-500/50 transition-all duration-300">
             <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950 text-amber-600 dark:text-amber-400 w-fit">
+              <div className="p-3.5 rounded-2xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 w-fit">
                 <Store className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
@@ -64,7 +64,7 @@ export function AboutOpportunities() {
           {/* For Dealers & Distributors */}
           <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col justify-between space-y-6 group hover:border-emerald-500/50 transition-all duration-300">
             <div className="space-y-4">
-              <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 w-fit">
+              <div className="p-3.5 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 w-fit">
                 <Briefcase className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
@@ -84,7 +84,7 @@ export function AboutOpportunities() {
 
         {/* Tagline Banner */}
         <div className="p-8 sm:p-10 rounded-3xl bg-[#039BC5] text-white shadow-2xl text-center space-y-3 mt-12">
-          <p className="text-lg sm:text-xl md:text-2xl font-extrabold leading-snug">
+          <p className="text-lg sm:text-2xl md:text-3xl font-bold leading-snug">
             GNX Power Solution — Empowering homes, businesses, and communities with sustainable, cost-effective energy for a greener tomorrow.
           </p>
         </div>

@@ -4,16 +4,18 @@ import { Button } from "@/components/ui/button";
 
 export function FinancingSubsidiesSection() {
   return (
+
+
     <section className="py-20 bg-gradient-to-br from-[#007b99]/10 via-white to-cyan-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 px-4 sm:px-6 lg:px-8 border-y border-cyan-500/20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-extrabold text-[#007b99] dark:text-cyan-400 uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+        <div className="text-center max-w-5xl mx-auto mb-14">
+          <span className="inline-block text-xs font-extrabold text-amber-700 dark:text-amber-400 uppercase tracking-widest px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6">
             FINANCING & SUBSIDIES
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mt-3 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
             Make Solar Affordable With Zero Hassle
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-6 leading-relaxed">
             Take advantage of government subsidies and flexible bank financing options tailored for residential and business owners.
           </p>
         </div>
@@ -22,7 +24,7 @@ export function FinancingSubsidiesSection() {
           {/* Card 1 */}
           <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-4 flex flex-col justify-between">
             <div>
-              <div className="p-3.5 rounded-2xl bg-amber-50 dark:bg-amber-950/50 text-amber-500 w-fit mb-4">
+              <div className="p-3.5 rounded-2xl bg-amber-100 dark:bg-amber-950/50 text-amber-500 w-fit mb-4">
                 <CreditCard className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Easy EMI Options</h3>
@@ -40,7 +42,7 @@ export function FinancingSubsidiesSection() {
           {/* Card 2 */}
           <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-4 flex flex-col justify-between">
             <div>
-              <div className="p-3.5 rounded-2xl bg-cyan-50 dark:bg-cyan-950/50 text-[#007b99] dark:text-cyan-400 w-fit mb-4">
+              <div className="p-3.5 rounded-2xl bg-cyan-100 dark:bg-cyan-950/50 text-[#007b99] dark:text-cyan-400 w-fit mb-4">
                 <Percent className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Govt Subsidy Assistance</h3>
@@ -58,7 +60,7 @@ export function FinancingSubsidiesSection() {
           {/* Card 3 */}
           <div className="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl space-y-4 flex flex-col justify-between">
             <div>
-              <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-500 w-fit mb-4">
+              <div className="p-3.5 rounded-2xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-500 w-fit mb-4">
                 <FileCheck className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Net Metering Support</h3>
@@ -77,9 +79,9 @@ export function FinancingSubsidiesSection() {
 
         <div className="mt-12 text-center">
           <Link href="/contact">
-            <Button size="lg" className="bg-[#007b99] hover:bg-[#005266] text-white font-extrabold rounded-full px-8 h-13 text-sm shadow-xl">
+            <Button size="lg" className="bg-[#007b99] hover:bg-[#005266] text-white font-extrabold rounded-full px-5 sm:px-8 py-3.5 sm:py-0 h-auto sm:h-13 text-xs sm:text-sm shadow-xl max-w-full whitespace-normal inline-flex items-center justify-center text-center">
               <span>Apply for Solar Financing & Subsidy Survey</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2 shrink-0" />
             </Button>
           </Link>
         </div>

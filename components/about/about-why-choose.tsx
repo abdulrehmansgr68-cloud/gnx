@@ -42,10 +42,10 @@ const WHY_CHOOSE_GNX = [
 
 export function AboutWhyChoose() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
+        <div className="text-center max-w-5xl mx-auto space-y-3">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Why Choose <span className="text-[#039BC5] dark:text-cyan-400">GNX Power Solution?</span>
           </h2>
