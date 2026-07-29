@@ -17,7 +17,7 @@ export function SolutionsCalculatorWidget() {
   const recommendedKw = Math.max(1, Math.ceil(unitsConsumedPerMonth / 120));
   const estimatedMonthlySavings = Math.round(monthlyBill * 0.88); // ~88% savings
   const estimatedAnnualSavings = estimatedMonthlySavings * 12;
-  
+
   // Average payback 3.5 years residential (with subsidy), 3.2 years commercial/industrial (with tax depreciation)
   const paybackYears = sector === "residential" ? 3.5 : 3.2;
   const co2ReducedTons = (recommendedKw * 1.3).toFixed(1); // ~1.3 tons CO2 per kW per year
@@ -25,14 +25,14 @@ export function SolutionsCalculatorWidget() {
   return (
     <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12">
-        
+
         {/* Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-800 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider">
             <Calculator className="w-3.5 h-3.5" />
             Interactive E-Commerce Tool
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Instant Solar Savings & <span className="text-[#039BC5] dark:text-cyan-400">ROI Calculator</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
@@ -42,7 +42,7 @@ export function SolutionsCalculatorWidget() {
 
         {/* Calculator Widget Container */}
         <div className="max-w-4xl mx-auto bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-2xl space-y-8">
-          
+
           {/* Step 1: Select Sector */}
           <div className="space-y-3">
             <label className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
@@ -51,11 +51,10 @@ export function SolutionsCalculatorWidget() {
             <div className="grid grid-cols-3 gap-3">
               <button
                 onClick={() => setSector("residential")}
-                className={`flex flex-col sm:flex-row items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border ${
-                  sector === "residential"
+                className={`flex flex-col sm:flex-row items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border ${sector === "residential"
                     ? "bg-[#039BC5] text-white border-[#039BC5] shadow-md"
                     : "bg-white dark:bg-slate-950 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-slate-300"
-                }`}
+                  }`}
               >
                 <Home className="w-4 h-4" />
                 <span>Residential</span>
@@ -63,11 +62,10 @@ export function SolutionsCalculatorWidget() {
 
               <button
                 onClick={() => setSector("commercial")}
-                className={`flex flex-col sm:flex-row items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border ${
-                  sector === "commercial"
+                className={`flex flex-col sm:flex-row items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border ${sector === "commercial"
                     ? "bg-[#039BC5] text-white border-[#039BC5] shadow-md"
                     : "bg-white dark:bg-slate-950 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-slate-300"
-                }`}
+                  }`}
               >
                 <Building2 className="w-4 h-4" />
                 <span>Commercial</span>
@@ -75,11 +73,10 @@ export function SolutionsCalculatorWidget() {
 
               <button
                 onClick={() => setSector("industrial")}
-                className={`flex flex-col sm:flex-row items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border ${
-                  sector === "industrial"
+                className={`flex flex-col sm:flex-row items-center justify-center gap-2 p-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all border ${sector === "industrial"
                     ? "bg-[#039BC5] text-white border-[#039BC5] shadow-md"
                     : "bg-white dark:bg-slate-950 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-slate-300"
-                }`}
+                  }`}
               >
                 <Factory className="w-4 h-4" />
                 <span>Industrial</span>
@@ -93,7 +90,7 @@ export function SolutionsCalculatorWidget() {
               <label className="text-xs font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 2. Average Monthly Electricity Bill (₹)
               </label>
-              <div className="text-xl sm:text-2xl font-black text-[#039BC5] dark:text-cyan-400">
+              <div className="text-xl sm:text-2xl font-bold text-[#039BC5] dark:text-cyan-400">
                 ₹{monthlyBill.toLocaleString("en-IN")} <span className="text-xs font-semibold text-slate-500">/ month</span>
               </div>
             </div>
@@ -117,14 +114,14 @@ export function SolutionsCalculatorWidget() {
 
           {/* Dynamic Calculation Results Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-lg">
-            
+
             {/* Stat 1: Recommended System */}
             <div className="space-y-1">
               <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 font-semibold">
                 <Zap className="w-3.5 h-3.5 text-amber-500" />
                 <span>System Size</span>
               </div>
-              <div className="text-2xl font-black text-slate-900 dark:text-white">
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">
                 {recommendedKw} <span className="text-sm font-bold text-[#039BC5]">kW</span>
               </div>
               <div className="text-[11px] text-slate-500">Estimated solar plant</div>
@@ -136,7 +133,7 @@ export function SolutionsCalculatorWidget() {
                 <PiggyBank className="w-3.5 h-3.5 text-emerald-500" />
                 <span>Est. Monthly Savings</span>
               </div>
-              <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400">
+              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
                 ₹{estimatedMonthlySavings.toLocaleString("en-IN")}
               </div>
               <div className="text-[11px] text-slate-500">₹{(estimatedAnnualSavings / 100000).toFixed(2)} Lakhs/year</div>
@@ -148,7 +145,7 @@ export function SolutionsCalculatorWidget() {
                 <Calendar className="w-3.5 h-3.5 text-cyan-500" />
                 <span>Payback Horizon</span>
               </div>
-              <div className="text-2xl font-black text-slate-900 dark:text-white">
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">
                 {paybackYears} <span className="text-sm font-bold text-slate-500">Years</span>
               </div>
               <div className="text-[11px] text-slate-500">21+ years free electricity</div>
@@ -160,7 +157,7 @@ export function SolutionsCalculatorWidget() {
                 <Leaf className="w-3.5 h-3.5 text-green-600" />
                 <span>CO2 Offset</span>
               </div>
-              <div className="text-2xl font-black text-slate-900 dark:text-white">
+              <div className="text-2xl font-bold text-slate-900 dark:text-white">
                 {co2ReducedTons} <span className="text-sm font-bold text-slate-500">Tons/yr</span>
               </div>
               <div className="text-[11px] text-slate-500">Clean green impact</div>

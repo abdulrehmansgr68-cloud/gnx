@@ -1,10 +1,10 @@
-import { 
-  BarChart, 
-  Layers, 
-  CheckSquare, 
-  Wrench, 
-  Activity, 
-  LifeBuoy 
+import {
+  BarChart,
+  Layers,
+  CheckSquare,
+  Wrench,
+  Activity,
+  LifeBuoy
 } from "lucide-react";
 
 const PROCESS_STEPS = [
@@ -52,7 +52,7 @@ export function AboutProcess() {
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Our End-to-End <span className="text-[#039BC5] dark:text-cyan-400">Execution Process</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400">
@@ -72,7 +72,7 @@ export function AboutProcess() {
                   <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800">
                     {item.icon}
                   </div>
-                  <span className="text-3xl font-black text-slate-200 dark:text-slate-800 group-hover:text-[#039BC5]/30 transition-colors">
+                  <span className="text-3xl font-bold text-slate-200 dark:text-slate-800 group-hover:text-[#039BC5]/30 transition-colors">
                     {item.step}
                   </span>
                 </div>

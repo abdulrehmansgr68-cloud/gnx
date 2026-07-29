@@ -30,7 +30,7 @@ export function AboutUnique() {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Title & Subtitle */}
         <div className="space-y-3">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             What Makes <span className="text-[#f26522]">Power Solution Unique</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal">

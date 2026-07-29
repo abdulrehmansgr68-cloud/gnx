@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
             <span>Data Protection & Privacy</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-md">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-md">
             Privacy Policy
           </h1>
 
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
 
       {/* 2. Main Content Body - Left Aligned to Standard Max-Width Grid */}
       <div className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto space-y-12">
-        
+
         {/* Welcome Intro */}
         <div className="space-y-3 border-b border-slate-200 dark:border-slate-800 pb-8">
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2.5">
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 1 */}
         <div className="space-y-4">
           <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-black">
+            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-bold">
               1
             </span>
             Information We Collect
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 2 */}
         <div className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800">
           <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-black">
+            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-bold">
               2
             </span>
             How We Use Your Information
@@ -145,7 +145,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 3 */}
         <div className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800">
           <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-black">
+            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-bold">
               3
             </span>
             Data Sharing and Disclosure
@@ -170,7 +170,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 4 */}
         <div className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800">
           <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-black">
+            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-bold">
               4
             </span>
             Data Retention & Account Deletion
@@ -193,7 +193,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 5 */}
         <div className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-800">
           <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-black">
+            <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-cyan-100 dark:bg-cyan-950 text-[#039BC5] text-xs font-bold">
               5
             </span>
             Contact Us

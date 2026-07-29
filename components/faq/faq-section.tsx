@@ -93,10 +93,10 @@ export function FaqSection() {
             GOT QUESTIONS?
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Frequently Asked<br />Questions
+            Frequently Asked Questions
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Everything you need to know about going solar.<br />
+            Everything you need to know about going solar.
             Can&apos;t find an answer? Contact our team.
           </p>
         </div>
@@ -107,11 +107,10 @@ export function FaqSection() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
-                activeCategory === cat
-                  ? "bg-[#0F172A] text-white shadow-md dark:bg-slate-100 dark:text-slate-900"
-                  : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 border border-transparent"
-              }`}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${activeCategory === cat
+                ? "bg-[#0F172A] text-white shadow-md dark:bg-slate-100 dark:text-slate-900"
+                : "bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-50 border border-transparent"
+                }`}
             >
               {cat}
             </button>
@@ -123,19 +122,19 @@ export function FaqSection() {
           {/* Left Column */}
           <div className="space-y-4">
             {leftColumn.map((faq) => (
-              <div 
-                key={faq.id} 
+              <div
+                key={faq.id}
                 className={cn(
                   "bg-white dark:bg-slate-900 rounded-xl transition-colors",
                   activeAccordion === faq.id ? "border border-primary ring-1 ring-primary/20 shadow-md" : "shadow-sm border border-transparent"
                 )}
               >
-                <Accordion 
+                <Accordion
                   value={activeAccordion === faq.id ? [faq.id] : []}
                   onValueChange={(val) => setActiveAccordion(val[0] || "")}
                 >
                   <AccordionItem value={faq.id} className="border-none">
-                    <AccordionTrigger>{faq.question}</AccordionTrigger>
+                    <AccordionTrigger className="text-slate-900 dark:text-white">{faq.question}</AccordionTrigger>
                     <AccordionContent>{faq.answer}</AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -146,14 +145,14 @@ export function FaqSection() {
           {/* Right Column */}
           <div className="space-y-4">
             {rightColumn.map((faq) => (
-              <div 
-                key={faq.id} 
+              <div
+                key={faq.id}
                 className={cn(
                   "bg-white dark:bg-slate-900 rounded-xl transition-colors",
                   activeAccordion === faq.id ? "border border-primary ring-1 ring-primary/20 shadow-md" : "shadow-sm border border-transparent"
                 )}
               >
-                <Accordion 
+                <Accordion
                   value={activeAccordion === faq.id ? [faq.id] : []}
                   onValueChange={(val) => setActiveAccordion(val[0] || "")}
                 >

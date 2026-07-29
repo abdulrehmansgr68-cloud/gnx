@@ -14,7 +14,7 @@ export function B2bSection() {
             <span>Commercial & Industrial Solar Solutions</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
             Power Your Enterprise with B2B Solar Solutions
           </h2>
 

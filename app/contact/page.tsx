@@ -46,7 +46,7 @@ export default function ContactPage() {
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>24/7 Dedicated Customer Support</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight drop-shadow-md">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight drop-shadow-md">
             Contact Us
           </h1>
           <p className="text-sm sm:text-base text-slate-200 mt-2 font-medium max-w-lg">

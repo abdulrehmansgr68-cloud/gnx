@@ -4,7 +4,7 @@ export function AboutOverview() {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Driving India's Clean Energy Future */}
         <div className="space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Driving India’s{" "}
             <span className="text-[#f26522]">Clean Energy Future</span>
           </h2>
@@ -36,7 +36,7 @@ export function AboutOverview() {
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
             Our <span className="text-[#f26522]">Mission</span>
           </h3>
-          
+
           <ul className="space-y-3 text-sm sm:text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed pl-2">
             <li className="flex items-start gap-2">
               <span className="text-[#f26522] font-bold text-lg">•</span>

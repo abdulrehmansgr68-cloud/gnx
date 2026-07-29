@@ -12,15 +12,15 @@ export function HeroContent() {
       </div>
 
       {/* Main Headline */}
-      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#111827] dark:text-white leading-[1.1] max-w-4xl drop-shadow-sm">
-        Power Your World with Solar —{" "}
-        <span className="text-[#007b99] dark:text-[#00a8ce]">
+      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white dark:text-white leading-[1.1] max-w-4xl drop-shadow-sm">
+        Power Your World with Solar{" "}
+        <span className="text-white">
           Shop, Install, Save.
         </span>
       </h1>
 
       {/* Subtitle */}
-      <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed font-normal max-w-2xl px-2">
+      <p className="text-sm sm:text-base text-text-primary dark:text-slate-200 leading-relaxed font-normal max-w-2xl px-2">
         India&apos;s trusted online platform for solar panels, hardware, and professional installation. From your first click to full power — we make going solar simple.
       </p>
 
@@ -29,7 +29,7 @@ export function HeroContent() {
         <Link href="/contact">
           <Button
             size="lg"
-            className="bg-[#00667e] hover:bg-[#005266] text-white font-bold rounded-full px-7 h-12 text-xs sm:text-sm shadow-lg shadow-[#00667e]/25 transition-all hover:scale-[1.02] active:scale-[0.98] inline-flex items-center justify-center gap-2 group cursor-pointer"
+            className="bg-[#00667e] hover:bg-[#005266] text-white font-bold rounded-full px-7 h-12 text-xs sm:text-base shadow-lg shadow-[#00667e]/25 transition-all hover:scale-[1.02] active:scale-[0.98] inline-flex items-center justify-center gap-2 group cursor-pointer"
           >
             <span>Shop Solar Panels, Hardware & Services</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -53,7 +53,7 @@ export function HeroContent() {
       <div className="flex flex-row items-center justify-center gap-3 pt-2">
         {/* Pill 1 */}
         <div className="flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200/90 dark:border-slate-800 shadow-md backdrop-blur-md">
-          <div className="p-2 rounded-lg bg-cyan-50 dark:bg-cyan-950/60 text-[#007b99] dark:text-cyan-400">
+          <div className="p-2 rounded-lg bg-cyan-200 dark:bg-cyan-950/60 text-[#007b99] dark:text-cyan-400">
             <ShieldCheck className="w-4 h-4" />
           </div>
           <div className="text-left">
@@ -64,7 +64,7 @@ export function HeroContent() {
 
         {/* Pill 2 */}
         <div className="flex items-center gap-2.5 px-4 py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 border border-slate-200/90 dark:border-slate-800 shadow-md backdrop-blur-md">
-          <div className="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-[#8a6d1c] dark:text-amber-400">
+          <div className="p-2 rounded-lg bg-amber-200 dark:bg-amber-950/60 text-[#8a6d1c] dark:text-amber-400">
             <Leaf className="w-4 h-4 fill-[#8a6d1c]/20" />
           </div>
           <div className="text-left">

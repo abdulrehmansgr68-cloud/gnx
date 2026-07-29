@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -20,9 +20,20 @@ export function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
-      <header className="sticky top-0 z-40 w-full relative bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 before:absolute before:-top-40 before:inset-x-0 before:h-40 before:bg-background dark:before:bg-slate-950 before:pointer-events-none">
+      <header className="sticky top-0 z-40 w-full relative bg-white dark:bg-slate-950 shadow-md dark:shadow-lg dark:shadow-black/50 before:absolute before:-top-40 before:inset-x-0 before:h-40 before:bg-white dark:before:bg-slate-950 before:pointer-events-none">
         <div className="w-full flex h-16 items-center justify-between">
           {/* Full-height Logo Banner with Slanted Right Edge */}
           <div
@@ -47,7 +58,7 @@ export function Navbar() {
           {/* Right Header Controls (Nav Links & Action Buttons) */}
           <div className="flex-1 flex items-center justify-end gap-3 sm:gap-6 md:gap-8 px-4 sm:px-6 lg:px-8">
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-7 text-sm">
+            <nav className="hidden md:flex items-center gap-7 text-base">
               {NAV_LINKS.map((link) => {
                 const isActive =
                   link.href === "/" ? pathname === "/" : pathname === link.href;
@@ -70,8 +81,8 @@ export function Navbar() {
             {/* Desktop Action Buttons & Theme Toggle */}
             <div className="flex items-center gap-3">
               <Link href="/contact">
-                <Button className="hidden sm:flex rounded-full px-6 bg-primary hover:bg-primary/90 shadow-md cursor-pointer">
-                  <Smartphone className="mr-2 h-4 w-4" />
+                <Button className="hidden sm:flex rounded-full text-md px-6 bg-primary hover:bg-primary/90 shadow-md cursor-pointer">
+                  <Smartphone className="mr-2 h-8 w-8" />
                   Contact Us & App
                 </Button>
               </Link>
@@ -100,24 +111,26 @@ export function Navbar() {
           />
 
           {/* Sliding Sidebar Panel */}
-          <aside className="fixed inset-y-0 right-0 z-50 w-72 max-w-[80vw] bg-background border-l border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 md:hidden">
+          <aside className="fixed inset-y-0 right-0 z-50 w-[100%] max-w-[80vw] bg-background border-l border-slate-200 dark:border-slate-800 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 md:hidden">
             <div className="space-y-6">
               {/* Sidebar Header */}
               <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
-                <div
-                  className="px-3 py-1.5 rounded-lg shadow-sm"
-                  style={{
-                    background: "linear-gradient(90deg, #02438A 0%, #029FC8 100%)",
-                  }}
-                >
-                  <Image
-                    src="/logo.svg"
-                    alt="GNX Power Solution"
-                    width={120}
-                    height={30}
-                    className="h-6 w-auto"
-                  />
-                </div>
+                <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
+                  <div
+                    className="px-3 py-1.5 rounded-lg shadow-sm"
+                    style={{
+                      background: "linear-gradient(90deg, #02438A 0%, #029FC8 100%)",
+                    }}
+                  >
+                    <Image
+                      src="/logo.svg"
+                      alt="GNX Power Solution"
+                      width={120}
+                      height={30}
+                      className="h-10 w-auto"
+                    />
+                  </div>
+                </Link>
 
                 <button
                   onClick={() => setIsOpen(false)}
@@ -139,7 +152,7 @@ export function Navbar() {
                       key={link.name}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl font-bold text-sm transition-all ${isActive
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl border-b font-bold text-base transition-all ${isActive
                         ? "bg-[#007b99]/10 text-[#007b99] dark:text-cyan-400 shadow-xs"
                         : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80"
                         }`}
@@ -153,16 +166,41 @@ export function Navbar() {
             </div>
 
             {/* Sidebar Footer */}
-            <div className="space-y-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+            <div className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col items-center">
+              <h6 className="text-base font-bold text-slate-900 dark:text-white">Download App</h6>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-snug">
+                Scan QR code with your mobile camera to download the GNX app.
+              </p>
+
+              {/* QR Code Container */}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.gnx.powersolution&hl=en_IN"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="group block p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs hover:border-[#007b99] transition-all text-center"
+                aria-label="Google Play Store QR Code"
+              >
+                <div className="relative w-24 h-24 mx-auto bg-white p-1.5 rounded-lg overflow-hidden">
+                  <Image
+                    src="/playstore-qr.png"
+                    alt="GNX Power Solution Play Store QR Code"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+                <span className="block text-[11px] text-slate-500 dark:text-slate-400 mt-1 font-medium">
+                  Scan to Download App
+                </span>
+              </a>
+
               <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full">
-                <Button className="w-full rounded-full bg-primary hover:bg-primary/90 shadow-md cursor-pointer font-bold">
-                  <Smartphone className="mr-2 h-4 w-4" />
+                <Button className="w-full text-md p-5 rounded-full bg-primary hover:bg-primary/90 shadow-md cursor-pointer font-bold">
+                  <Smartphone className="mr-2 h-8 w-8" />
                   Contact Us & App
                 </Button>
               </Link>
-              <p className="text-[11px] text-center text-slate-400 dark:text-slate-500 font-medium">
-                © {new Date().getFullYear()} GNX Power Solution
-              </p>
             </div>
           </aside>
         </>

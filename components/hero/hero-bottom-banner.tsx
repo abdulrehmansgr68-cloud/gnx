@@ -2,28 +2,28 @@ import { Sun, BatteryCharging, Sliders, Award } from "lucide-react";
 
 const metrics = [
   {
-    icon: <Sun className="h-5 w-5 text-[#007b99] dark:text-cyan-400" />,
+    icon: <Sun className="h-5 w-5 text-green-700 dark:text-green-400" />,
     value: "50MW+",
     label: "Solar Panels Installed",
-    iconBg: "bg-cyan-50 dark:bg-cyan-950/60",
+    iconBg: "bg-green-200 dark:bg-green-950/60",
   },
   {
     icon: <BatteryCharging className="h-5 w-5 text-amber-600 dark:text-amber-400" />,
     value: "20MWh+",
     label: "Energy Stored Daily",
-    iconBg: "bg-amber-50 dark:bg-amber-950/60",
+    iconBg: "bg-amber-200 dark:bg-amber-950/60",
   },
   {
     icon: <Sliders className="h-5 w-5 text-orange-600 dark:text-orange-400" />,
     value: "Smart",
     label: "Hybrid Inverter Tech",
-    iconBg: "bg-orange-50 dark:bg-orange-950/60",
+    iconBg: "bg-orange-200 dark:bg-orange-950/60",
   },
   {
-    icon: <Award className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />,
+    icon: <Award className="h-5 w-5 text-blue-600 dark:text-blue-400" />,
     value: "Tier 1",
     label: "Certified Quality",
-    iconBg: "bg-yellow-50 dark:bg-yellow-950/60",
+    iconBg: "bg-blue-200 dark:bg-blue-950/60",
   },
 ];
 
@@ -43,10 +43,10 @@ export function HeroBottomBanner() {
               >
                 {metric.icon}
               </div>
-              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+              <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white tracking-tight leading-tight">
                 {metric.value}
               </h3>
-              <p className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
+              <p className="text-sm sm:text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                 {metric.label}
               </p>
             </div>

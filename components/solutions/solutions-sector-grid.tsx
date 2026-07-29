@@ -95,19 +95,19 @@ export function SolutionsSectorGrid() {
   const current = SECTORS.find((s) => s.id === activeSector) || SECTORS[0];
 
   return (
-    <section id="sectors" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <section id="sectors" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-12">
-        
+
         {/* Header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-100 dark:bg-cyan-950/80 border border-cyan-300 dark:border-cyan-800 text-[#039BC5] dark:text-cyan-400 text-xs font-bold uppercase tracking-wider">
+        <div className="text-center space-y-4 max-w-5xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-100 dark:bg-cyan-950/80 border border-cyan-300 dark:border-cyan-800 text-[#039BC5] dark:text-cyan-400 text-xs font-bold uppercase tracking-wider mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             Tailored Solar Energy Systems
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Solar Solutions for Every <span className="text-[#039BC5] dark:text-cyan-400">Scale & Sector</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-base sm:text-lg mt-3 text-slate-600 dark:text-slate-400">
             Whether you want to eliminate residential light bills or power a heavy manufacturing facility, GNX provides precision-engineered solar infrastructure.
           </p>
         </div>
@@ -121,11 +121,10 @@ export function SolutionsSectorGrid() {
               <button
                 key={sector.id}
                 onClick={() => setActiveSector(sector.id)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-bold text-sm transition-all duration-200 flex-1 sm:flex-initial justify-center ${
-                  isActive
-                    ? "bg-[#039BC5] text-white shadow-md shadow-cyan-500/20 scale-[1.02]"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900"
-                }`}
+                className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-bold text-sm transition-all duration-200 flex-1 sm:flex-initial justify-center ${isActive
+                  ? "bg-[#039BC5] text-white shadow-md shadow-cyan-500/20 scale-[1.02]"
+                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900"
+                  }`}
               >
                 <Icon className="w-4 h-4" />
                 <span>{sector.title.split(" ")[0]}</span>
@@ -136,7 +135,7 @@ export function SolutionsSectorGrid() {
 
         {/* Active Sector Detailed View */}
         <div className="bg-white dark:bg-slate-950 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 lg:p-12 shadow-xl space-y-8">
-          
+
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-between">
             {/* Left Content */}
             <div className="space-y-6 flex-1">
@@ -219,11 +218,10 @@ export function SolutionsSectorGrid() {
               <div
                 key={sector.id}
                 onClick={() => setActiveSector(sector.id)}
-                className={`p-6 rounded-2xl bg-white dark:bg-slate-950 border transition-all duration-300 cursor-pointer flex flex-col justify-between space-y-4 ${
-                  activeSector === sector.id
-                    ? "border-[#039BC5] dark:border-cyan-400 shadow-xl ring-2 ring-[#039BC5]/20"
-                    : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-md"
-                }`}
+                className={`p-6 rounded-2xl bg-white dark:bg-slate-950 border transition-all duration-300 cursor-pointer flex flex-col justify-between space-y-4 ${activeSector === sector.id
+                  ? "border-[#039BC5] dark:border-cyan-400 shadow-xl ring-2 ring-[#039BC5]/20"
+                  : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-md"
+                  }`}
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">

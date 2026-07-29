@@ -55,19 +55,19 @@ const managers = [
 
 export function TeamSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[#039BC5] text-xs font-semibold uppercase tracking-wider mb-4 shadow-xs">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[#039BC5] text-xs font-semibold uppercase tracking-wider mb-6 shadow-xs">
             <Users className="w-3.5 h-3.5" />
             Leadership & Vision
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-            The Minds Behind <span className="text-[#039BC5]">GNX Power</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+            The Minds Behind <span className="text-[#039BC5]">GNX Power Solution</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
             Our team of seasoned industry leaders and dedicated managers is driving the transition toward sustainable energy with unmatched expertise and integrity.
@@ -93,7 +93,7 @@ export function TeamSection() {
                       priority
                     />
                   </div>
-                  <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-[#039BC5] text-xs font-bold">
+                  <div className="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/20 text-[#039BC5] text-xs font-bold">
                     <Award className="w-3.5 h-3.5" />
                     <span>{executive.experience}</span>
                   </div>
@@ -166,16 +166,16 @@ export function TeamSection() {
                   <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-[#039BC5] transition-colors">
                     {manager.name}
                   </h4>
-                  <p className="text-[#039BC5] font-semibold text-sm mb-3">
+                  <p className="text-[#039BC5] font-semibold text-base mb-3">
                     {manager.role}
                   </p>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                  <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6">
                     {manager.bio}
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80">
-                  <span className="inline-block px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 text-xs font-medium border border-slate-200/60 dark:border-slate-700/60">
                     Exp: {manager.experience}
                   </span>
                 </div>
@@ -200,10 +200,10 @@ export function TeamSection() {
                     <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-[#039BC5] transition-colors">
                       {manager.name}
                     </h4>
-                    <p className="text-[#039BC5] font-semibold text-sm mb-3">
+                    <p className="text-[#039BC5] font-semibold text-base mb-3">
                       {manager.role}
                     </p>
-                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6">
                       {manager.bio}
                     </p>
                   </div>

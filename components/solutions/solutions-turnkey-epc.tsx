@@ -42,16 +42,16 @@ const PROCESS_STEPS = [
 
 export function SolutionsTurnkeyEpc() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-16">
-        
+
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div className="space-y-4 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-[#02438A] dark:text-cyan-400 text-xs font-bold uppercase tracking-wider">
               ⚡ Complete Lifecycle Management
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
               Turnkey Rooftop Solar & <br className="hidden sm:inline" />
               <span className="text-[#039BC5] dark:text-cyan-400">End-to-End EPC Services</span>
             </h2>
@@ -128,7 +128,7 @@ export function SolutionsTurnkeyEpc() {
         {/* Lifecycle Execution 5-Step Process */}
         <div className="space-y-8 pt-4">
           <div className="text-center space-y-2">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#039BC5] dark:text-white">
               The 5-Step GNX Execution Roadmap
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400">
@@ -146,7 +146,7 @@ export function SolutionsTurnkeyEpc() {
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-black text-[#039BC5] dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-950 px-2.5 py-1 rounded-full">
+                      <span className="text-xs font-bold text-[#039BC5] dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-950 px-2.5 py-1 rounded-full">
                         {stepItem.step}
                       </span>
                       <Icon className="w-6 h-6 text-slate-400 dark:text-slate-500" />

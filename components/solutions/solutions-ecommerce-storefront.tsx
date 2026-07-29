@@ -51,7 +51,7 @@ export function SolutionsEcommerceStorefront() {
             <ShoppingBag className="w-3.5 h-3.5 text-amber-400" />
             Digital Storefront
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
             Solar E-Commerce Store <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-cyan-400 to-sky-300 bg-clip-text text-transparent">
               Direct Component Sourcing

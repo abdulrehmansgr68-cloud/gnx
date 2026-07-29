@@ -114,7 +114,7 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/send-email.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -206,9 +206,8 @@ export function ContactForm() {
             </label>
             <div className="relative">
               <User
-                className={`w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors ${
-                  fieldErrors.fullName ? "text-red-500" : "text-slate-400"
-                }`}
+                className={`w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors ${fieldErrors.fullName ? "text-red-500" : "text-slate-400"
+                  }`}
               />
               <Input
                 required
@@ -221,11 +220,10 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, fullName: e.target.value })
                 }
-                className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${
-                  fieldErrors.fullName
-                    ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
-                    : "border-slate-200 dark:border-slate-800"
-                }`}
+                className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.fullName
+                  ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                  : "border-slate-200 dark:border-slate-800"
+                  }`}
               />
             </div>
             {fieldErrors.fullName && (
@@ -243,9 +241,8 @@ export function ContactForm() {
             </label>
             <div className="relative">
               <Mail
-                className={`w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors ${
-                  fieldErrors.email ? "text-red-500" : "text-slate-400"
-                }`}
+                className={`w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors ${fieldErrors.email ? "text-red-500" : "text-slate-400"
+                  }`}
               />
               <Input
                 required
@@ -256,11 +253,10 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${
-                  fieldErrors.email
-                    ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
-                    : "border-slate-200 dark:border-slate-800"
-                }`}
+                className={`pl-10 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm ${fieldErrors.email
+                  ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                  : "border-slate-200 dark:border-slate-800"
+                  }`}
               />
             </div>
             {fieldErrors.email && (
@@ -292,11 +288,10 @@ export function ContactForm() {
                   const val = e.target.value.replace(/\D/g, "").slice(0, 10);
                   setFormData({ ...formData, phone: val });
                 }}
-                className={`pl-20 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm font-medium tracking-wide ${
-                  fieldErrors.phone
-                    ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
-                    : "border-slate-200 dark:border-slate-800"
-                }`}
+                className={`pl-20 h-12 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm font-medium tracking-wide ${fieldErrors.phone
+                  ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                  : "border-slate-200 dark:border-slate-800"
+                  }`}
               />
             </div>
             {fieldErrors.phone && (
@@ -316,9 +311,8 @@ export function ContactForm() {
             </div>
             <div className="relative">
               <MessageSquare
-                className={`w-4 h-4 absolute left-3.5 top-4 transition-colors ${
-                  fieldErrors.message ? "text-red-500" : "text-slate-400"
-                }`}
+                className={`w-4 h-4 absolute left-3.5 top-4 transition-colors ${fieldErrors.message ? "text-red-500" : "text-slate-400"
+                  }`}
               />
               <Textarea
                 required
@@ -331,11 +325,10 @@ export function ContactForm() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className={`pl-10 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm resize-none ${
-                  fieldErrors.message
-                    ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
-                    : "border-slate-200 dark:border-slate-800"
-                }`}
+                className={`pl-10 rounded-xl bg-slate-50/50 dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 transition-all text-sm resize-none ${fieldErrors.message
+                  ? "border-red-500 text-red-900 dark:text-red-200 focus-visible:ring-red-500/20"
+                  : "border-slate-200 dark:border-slate-800"
+                  }`}
               />
             </div>
             {fieldErrors.message && (
@@ -381,7 +374,7 @@ export function ContactForm() {
             <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
               Inquiry Received
             </span>
-            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-2">
+            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-2">
               Thank You, {formData.fullName || "Customer"}!
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 max-w-md mx-auto leading-relaxed">

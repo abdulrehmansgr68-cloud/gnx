@@ -32,14 +32,14 @@ export function ValuePropSection() {
     <section className="py-20 bg-slate-50 dark:bg-slate-900/60 px-4 sm:px-6 lg:px-8 border-y border-slate-200/60 dark:border-slate-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#007b99]/10 text-[#007b99] dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#007b99]/10 text-[#007b99] dark:text-cyan-400 font-bold text-xs uppercase tracking-wider mb-6">
             <CheckCircle2 className="w-3.5 h-3.5" />
             <span>Why Go Solar With Us?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
             The Ultimate Solar Advantage
           </h2>
-          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-6 leading-relaxed">
             We simplify solar energy adoption with certified hardware, Pan India Base installation, and complete government subsidy assistance.
           </p>
         </div>
@@ -51,7 +51,7 @@ export function ValuePropSection() {
               className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col justify-between"
             >
               <div>
-                <div className="p-3 rounded-2xl bg-cyan-50 dark:bg-cyan-950/50 w-fit mb-5 shadow-sm">
+                <div className="p-3 rounded-2xl bg-cyan-100 dark:bg-cyan-950/50 w-fit mb-5 shadow-sm">
                   {item.icon}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">

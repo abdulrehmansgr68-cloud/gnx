@@ -14,15 +14,15 @@ export function MissionVisionSection() {
   ];
 
   return (
-    <section className="relative py-28 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 lg:px-8">
+    <section className="relative pb-8 pt-16 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 px-4 sm:px-6 lg:px-8">
       {/* Background Ambient Glow Effects */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#039BC5]/10 dark:bg-[#039BC5]/15 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-cyan-400/10 dark:bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#039BC5]/10 text-[#039BC5] dark:bg-[#039BC5]/20 dark:text-cyan-400 font-semibold text-xs tracking-wider uppercase mb-4">
+        <div className="text-center max-w-5xl mx-auto mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#039BC5]/10 text-[#039BC5] dark:bg-[#039BC5]/20 dark:text-cyan-400 font-semibold text-xs tracking-wider uppercase mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             Driving Renewable Purpose
           </div>
@@ -36,7 +36,7 @@ export function MissionVisionSection() {
 
         {/* Grid Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-          
+
           {/* Vision Card */}
           <div className="relative group rounded-3xl p-8 sm:p-12 bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between overflow-hidden">
             {/* Top Accent Gradient Bar */}
@@ -76,7 +76,7 @@ export function MissionVisionSection() {
                 {visionPillars.map((pillar, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 text-xs font-medium text-slate-700 dark:text-slate-300"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60 text-xs font-medium text-slate-700 dark:text-slate-300"
                   >
                     <pillar.icon className="w-3.5 h-3.5 text-[#039BC5]" />
                     {pillar.label}

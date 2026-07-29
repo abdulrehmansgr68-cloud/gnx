@@ -10,16 +10,16 @@ export function AboutSummary() {
             <Sparkles className="w-4 h-4" />
             Executive Summary
           </div>
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
             Powering a Sustainable Future with{" "}
             <span className="text-[#039BC5] dark:text-cyan-400">Smart Solar Solutions</span>
           </h2>
-          
+
           <p className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed font-normal pt-2">
             <strong className="font-extrabold text-slate-900 dark:text-white">GNX Power Solution</strong> is a trusted solar energy company and a comprehensive digital e-commerce platform dedicated to making clean, affordable, and renewable energy accessible across India.
           </p>
-          
+
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
             We bridge the gap between quality manufacturing and end-users by offering a complete range of solar products alongside end-to-end solar solutions for <span className="font-semibold text-slate-800 dark:text-slate-200">Residential, Commercial, and Industrial sectors</span>. From online purchasing to professional rooftop installation and lifelong support, GNX Power Solution is your one-stop destination for all solar needs.
           </p>

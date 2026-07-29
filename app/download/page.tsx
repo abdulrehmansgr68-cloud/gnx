@@ -73,7 +73,7 @@ export default function DownloadPage() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.12]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white tracking-tight leading-[1.12]">
             Solar Procurement &amp; Vendor Management{" "}
             <span className="bg-gradient-to-r from-[#007b99] via-[#015C8F] to-[#f26522] bg-clip-text text-transparent">
               On Your Phone
@@ -167,7 +167,7 @@ export default function DownloadPage() {
             <span>Official Google Play App</span>
           </div>
 
-          <h3 className="text-2xl sm:text-4xl font-black text-white max-w-2xl mx-auto">
+          <h3 className="text-2xl sm:text-4xl font-bold text-white max-w-2xl mx-auto">
             Ready to Streamline Your Solar Energy Sourcing?
           </h3>
 

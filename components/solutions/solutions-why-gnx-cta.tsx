@@ -27,19 +27,19 @@ const WHY_GNX_ITEMS = [
 
 export function SolutionsWhyGnxCta() {
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/40 transition-colors duration-300">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-slate-50 dark:bg-slate-900/40 transition-colors duration-300">
       <div className="max-w-7xl mx-auto space-y-16">
-        
+
         {/* Header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-100 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-800 text-[#039BC5] dark:text-cyan-400 text-xs font-bold uppercase tracking-wider">
+        <div className="text-center space-y-4 max-w-6xl mx-auto">
+          <div className="inline-flex items-center gap-2 mb-6 px-3.5 py-1 rounded-full bg-cyan-100 dark:bg-cyan-950 border border-cyan-300 dark:border-cyan-800 text-[#039BC5] dark:text-cyan-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             The GNX Advantage
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
             Why Choose GNX for Your <span className="text-[#039BC5] dark:text-cyan-400">Solar Transformation</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mt-6">
             Uncompromising quality, transparent pricing, and decades of reliable clean energy generation.
           </p>
         </div>
@@ -71,9 +71,9 @@ export function SolutionsWhyGnxCta() {
 
         {/* Final Conversion CTA Banner */}
         <div className="rounded-3xl bg-gradient-to-r from-[#02438A] via-[#027ea1] to-[#029FC8] text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
-          
+
           <div className="space-y-4 max-w-2xl text-center lg:text-left z-10">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
               Ready to Switch to Smart Solar Energy?
             </h3>
             <p className="text-slate-100 text-base sm:text-lg leading-relaxed">

@@ -11,7 +11,7 @@ export default function NotFound() {
           <span>404 - Page Not Found</span>
         </div>
 
-        <h1 className="text-6xl sm:text-7xl font-black text-slate-900 dark:text-white tracking-tight">
+        <h1 className="text-6xl sm:text-7xl font-bold text-slate-900 dark:text-white tracking-tight">
           Oops!
         </h1>
 

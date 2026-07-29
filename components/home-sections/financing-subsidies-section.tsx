@@ -10,7 +10,7 @@ export function FinancingSubsidiesSection() {
           <span className="text-xs font-extrabold text-[#007b99] dark:text-cyan-400 uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
             FINANCING & SUBSIDIES
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mt-3 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mt-3 tracking-tight">
             Make Solar Affordable With Zero Hassle
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">

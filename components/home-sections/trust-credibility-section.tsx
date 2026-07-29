@@ -8,14 +8,14 @@ export function TrustCredibilitySection() {
   return (
     <section className="py-20 bg-slate-900 text-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-5xl mx-auto mb-14">
           <span className="text-xs font-extrabold text-cyan-400 uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
             TRUST & CREDIBILITY
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
+          <h3 className="py-8 text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Why Hundreds of Solar Buyers Trust GNX
-          </h2>
-          <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+          </h3>
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
             Certified equipment, transparent billing, and dedicated engineering installation teams on a Pan India Base.
           </p>
         </div>

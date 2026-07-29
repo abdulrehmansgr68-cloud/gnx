@@ -1,14 +1,14 @@
-import { 
-  Sun, 
-  TrendingUp, 
-  Zap, 
-  Gauge, 
-  Home, 
-  BatteryCharging, 
-  CreditCard, 
-  FileSearch, 
-  Building2, 
-  Sparkles 
+import {
+  Sun,
+  TrendingUp,
+  Zap,
+  Gauge,
+  Home,
+  BatteryCharging,
+  CreditCard,
+  FileSearch,
+  Building2,
+  Sparkles
 } from "lucide-react";
 
 const SERVICES = [
@@ -61,7 +61,7 @@ export function AboutServices() {
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Title & Subtitle */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             Our Services
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed font-medium">
