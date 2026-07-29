@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { ShieldCheck, ArrowRight, Zap, Star } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ShieldCheck, ArrowRight } from "lucide-react";
 
 export function HeroImage() {
   return (
@@ -34,10 +33,10 @@ export function HeroImage() {
             </div>
 
             <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">
-              Solar Panels & Energy Storage Systems
+              Solar Panels &amp; Energy Storage Systems
             </h3>
             <p className="text-xs text-slate-300 mt-1">
-              Order online with 25-Year Warranty & Free Doorstep Pan-India Shipping.
+              Order online with 25-Year Warranty &amp; Free Doorstep Pan-India Shipping.
             </p>
           </div>
 
@@ -53,5 +52,3 @@ export function HeroImage() {
     </div>
   );
 }
-
-

@@ -3,7 +3,6 @@ import { MissionVisionSection } from "@/components/about/mission-vision-section"
 import { TeamSection } from "@/components/about/team-section";
 import { ValuePropSection } from "@/components/home-sections/value-prop-section";
 import { ProcessSection } from "@/components/process/process-section";
-import { CategoryShopSection } from "@/components/home-sections/category-shop-section";
 import { TrustCredibilitySection } from "@/components/home-sections/trust-credibility-section";
 import { FinancingSubsidiesSection } from "@/components/home-sections/financing-subsidies-section";
 import { B2bSection } from "@/components/home-sections/b2b-section";
@@ -25,12 +24,8 @@ export default function Home() {
       {/* 4. Value Proposition Section */}
       <ValuePropSection />
 
-
-      {/* 4. How It Works (4-Step Process) */}
+      {/* 5. How It Works (4-Step Process) */}
       <ProcessSection />
-
-      {/* 5. Shop by Category */}
-      {/* <CategoryShopSection /> */}
 
       {/* 6. Why Choose Us (Trust & Credibility) */}
       <TrustCredibilitySection />

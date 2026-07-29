@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, ShieldAlert, Cpu, Wrench, FileCheck, ShieldCheck, ArrowRight, Layers } from "lucide-react";
+import { CheckCircle2, Cpu, Wrench, FileCheck, ShieldCheck, ArrowRight, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const PROCESS_STEPS = [

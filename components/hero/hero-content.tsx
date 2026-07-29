@@ -21,7 +21,7 @@ export function HeroContent() {
 
       {/* Subtitle */}
       <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed font-normal max-w-2xl px-2">
-        India's trusted online platform for solar panels, hardware, and professional installation. From your first click to full power — we make going solar simple.
+        India&apos;s trusted online platform for solar panels, hardware, and professional installation. From your first click to full power — we make going solar simple.
       </p>
 
       {/* Primary & Secondary Action Buttons */}

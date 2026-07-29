@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Home, Building2, Factory, CheckCircle2, ArrowRight, Sparkles, Shield, BatteryCharging, DollarSign } from "lucide-react";
+import { Home, Building2, Factory, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 

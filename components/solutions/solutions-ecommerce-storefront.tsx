@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { ShoppingBag, Sun, Zap, Battery, Layers, CheckCircle2, ArrowRight, Shield, Truck, Tag, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ShoppingBag, Sun, Zap, Battery, Layers, CheckCircle2, Shield, Truck, Tag, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const PRODUCT_CATEGORIES = [

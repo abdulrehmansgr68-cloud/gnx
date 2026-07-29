@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Calculator, Home, Building2, Factory, Zap, PiggyBank, Leaf, Calendar, ArrowRight, Sparkles } from "lucide-react";
+import { Calculator, Home, Building2, Factory, Zap, PiggyBank, Leaf, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function SolutionsCalculatorWidget() {

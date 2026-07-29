@@ -1,21 +1,16 @@
 import nodemailer from "nodemailer";
-
-const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
-const smtpPort = parseInt(process.env.SMTP_PORT || "587", 10);
-const smtpUser = process.env.SMTP_USER;
-const smtpPass = process.env.SMTP_PASS;
-const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || smtpUser;
+import { env } from "./env";
 
 export const transporter = nodemailer.createTransport({
-  host: smtpHost,
-  port: smtpPort,
-  secure: smtpPort === 465, // true for 465, false for 587/25
+  host: env.SMTP_HOST,
+  port: env.SMTP_PORT,
+  secure: env.SMTP_PORT === 465, // true for 465, false for 587/25
   auth: {
-    user: smtpUser,
-    pass: smtpPass,
+    user: env.SMTP_USER,
+    pass: env.SMTP_PASS,
   },
   tls: {
-    rejectUnauthorized: false, // Prevents issues with self-signed certificates or strict TLS environments
+    rejectUnauthorized: env.SMTP_REJECT_UNAUTHORIZED,
   },
 });
 
@@ -26,12 +21,26 @@ interface ContactFormPayload {
   message: string;
 }
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export async function sendContactEmail(payload: ContactFormPayload) {
   const { fullName, email, phone, message } = payload;
 
-  if (!smtpUser || !smtpPass) {
+  if (!env.SMTP_USER || !env.SMTP_PASS) {
     throw new Error("SMTP credentials are missing in environment variables.");
   }
+
+  const safeName = escapeHtml(fullName);
+  const safeEmail = escapeHtml(email);
+  const safePhone = escapeHtml(phone);
+  const safeMessage = escapeHtml(message);
 
   const htmlContent = `
     <!DOCTYPE html>
@@ -70,18 +79,18 @@ export async function sendContactEmail(payload: ContactFormPayload) {
                   <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f8fafc; border-radius: 12px; padding: 16px; border: 1px solid #e2e8f0; margin-bottom: 24px;">
                     <tr>
                       <td style="padding: 6px 0; font-size: 13px; color: #64748b; font-weight: 600; width: 110px;">Full Name:</td>
-                      <td style="padding: 6px 0; font-size: 14px; color: #0f172a; font-weight: 700;">${fullName}</td>
+                      <td style="padding: 6px 0; font-size: 14px; color: #0f172a; font-weight: 700;">${safeName}</td>
                     </tr>
                     <tr>
                       <td style="padding: 6px 0; font-size: 13px; color: #64748b; font-weight: 600;">Email:</td>
                       <td style="padding: 6px 0; font-size: 14px; color: #007b99; font-weight: 700;">
-                        <a href="mailto:${email}" style="color: #007b99; text-decoration: none;">${email}</a>
+                        <a href="mailto:${safeEmail}" style="color: #007b99; text-decoration: none;">${safeEmail}</a>
                       </td>
                     </tr>
                     <tr>
                       <td style="padding: 6px 0; font-size: 13px; color: #64748b; font-weight: 600;">Phone:</td>
                       <td style="padding: 6px 0; font-size: 14px; color: #0f172a; font-weight: 700;">
-                        <a href="tel:${phone}" style="color: #0f172a; text-decoration: none;">${phone}</a>
+                        <a href="tel:${safePhone}" style="color: #0f172a; text-decoration: none;">${safePhone}</a>
                       </td>
                     </tr>
                     <tr>
@@ -97,15 +106,13 @@ export async function sendContactEmail(payload: ContactFormPayload) {
                     <label style="display: block; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
                       Message / Requirement:
                     </label>
-                    <div style="background-color: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #f26522; border-radius: 8px; padding: 16px; font-size: 14px; color: #1e293b; line-height: 1.6; white-space: pre-wrap;">
-                      ${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
-                    </div>
+                    <div style="background-color: #ffffff; border: 1px solid #cbd5e1; border-left: 4px solid #f26522; border-radius: 8px; padding: 16px; font-size: 14px; color: #1e293b; line-height: 1.6; white-space: pre-wrap;">${safeMessage}</div>
                   </div>
 
                   <!-- Quick Action Button -->
                   <div style="text-align: center; margin-top: 28px;">
-                    <a href="mailto:${email}?subject=Re:%20Inquiry%20regarding%20GNX%20Power%20Solution" style="display: inline-block; background-color: #007b99; color: #ffffff; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; box-shadow: 0 4px 10px rgba(0,123,153,0.3);">
-                      Reply to ${fullName}
+                    <a href="mailto:${safeEmail}?subject=Re:%20Inquiry%20regarding%20GNX%20Power%20Solution" style="display: inline-block; background-color: #007b99; color: #ffffff; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-size: 14px; font-weight: 700; box-shadow: 0 4px 10px rgba(0,123,153,0.3);">
+                      Reply to ${safeName}
                     </a>
                   </div>
                 </td>
@@ -130,8 +137,8 @@ export async function sendContactEmail(payload: ContactFormPayload) {
 
   try {
     return await transporter.sendMail({
-      from: `"GNX Power Solution Web" <${smtpUser}>`,
-      to: receiverEmail,
+      from: `"GNX Power Solution Web" <${env.SMTP_USER}>`,
+      to: env.CONTACT_RECEIVER_EMAIL,
       replyTo: `"${fullName}" <${email}>`,
       subject: `⚡ New Inquiry from ${fullName} - GNX Power Solution`,
       html: htmlContent,

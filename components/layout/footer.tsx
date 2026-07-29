@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -26,7 +26,7 @@ export function Footer() {
             />
           </div>
           <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
-            India's trusted online platform for solar panels, hardware, and professional installation. From your first click to full power — we make going solar simple.
+            India&apos;s trusted online platform for solar panels, hardware, and professional installation. From your first click to full power — we make going solar simple.
           </p>
 
           <div className="text-xs text-slate-500 dark:text-slate-400 space-y-1 pt-1">

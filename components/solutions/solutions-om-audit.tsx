@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Activity, Search, ShieldCheck, Wrench, BarChart3, Clock, CheckCircle2, ArrowRight } from "lucide-react";
+import { Activity, Search, Wrench, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function SolutionsOmAudit() {
@@ -41,7 +41,7 @@ export function SolutionsOmAudit() {
                   Operations & Maintenance (O&M)
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                  Our support doesn't end after installation. We offer continuous system monitoring, preventive maintenance, performance upgrades, and prompt repair services to keep your solar plant running at peak yield for decades.
+                  Our support doesn&apos;t end after installation. We offer continuous system monitoring, preventive maintenance, performance upgrades, and prompt repair services to keep your solar plant running at peak yield for decades.
                 </p>
               </div>
 

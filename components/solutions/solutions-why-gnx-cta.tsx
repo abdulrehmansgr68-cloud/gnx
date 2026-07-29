@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck, Award, Zap, HeartHandshake, CheckCircle2, Phone, ArrowRight, Sparkles } from "lucide-react";
+import { ShieldCheck, Award, Zap, HeartHandshake, Phone, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WHY_GNX_ITEMS = [

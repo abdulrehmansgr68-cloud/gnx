@@ -185,7 +185,7 @@ export default function PrivacyPolicyPage() {
               <a href="mailto:support@gnxpowersolution.com" className="font-bold underline hover:text-amber-700 dark:hover:text-amber-300">
                 support@gnxpowersolution.com
               </a>{" "}
-              or by selecting the <strong>"Delete Account"</strong> option inside the mobile application.
+              or by selecting the <strong>&quot;Delete Account&quot;</strong> option inside the mobile application.
             </p>
           </div>
         </div>

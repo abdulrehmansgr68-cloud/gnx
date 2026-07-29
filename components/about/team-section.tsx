@@ -115,7 +115,7 @@ export function TeamSection() {
                   </div>
 
                   <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed italic border-l-0 lg:border-l-4 border-cyan-500 lg:pl-4 py-1">
-                    "{executive.bio}"
+                    &quot;{executive.bio}&quot;
                   </p>
 
                   <div className="pt-2 flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">

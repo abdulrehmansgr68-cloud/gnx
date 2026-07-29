@@ -88,7 +88,7 @@ export function ProjectsSection() {
           {filteredProjects.map((project, index) => {
             // Layout logic when showing "All" vs filtered
             let colSpan = "md:col-span-6 lg:col-span-4"; // Default for small sets
-            let hClass = "min-h-[300px] md:min-h-[350px]";
+            const hClass = "min-h-[300px] md:min-h-[350px]";
 
             if (activeFilter === "All") {
               // 1st, 2nd, 3rd take 4 cols (1/3 width). 4th, 5th take 6 cols (1/2 width).

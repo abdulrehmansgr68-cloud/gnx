@@ -1,4 +1,4 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   Smartphone,
@@ -11,9 +11,20 @@ import {
   ArrowRight,
   Star,
   CheckCircle2,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Download App | GNX Power Solution Mobile App",
+  description:
+    "Download the official GNX Power Solution mobile app on Google Play. Access direct factory pricing on solar panels, generate instant GST invoices, and track live order deliveries.",
+  openGraph: {
+    title: "Download GNX Power Solution Android App",
+    description:
+      "Order Tier-1 solar equipment, calculate solar capacities, and manage vendor orders directly from your phone.",
+  },
+};
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.gnx.powersolution&hl=en_IN";
@@ -22,25 +33,29 @@ const APP_FEATURES = [
   {
     icon: <Zap className="w-6 h-6 text-amber-500" />,
     title: "Direct Factory Prices",
-    description: "Access competitive rates on Tier-1 solar panels, hybrid inverters & lithium storage batteries.",
+    description:
+      "Access competitive rates on Tier-1 solar panels, hybrid inverters & lithium storage batteries.",
     bgColor: "bg-amber-50 dark:bg-amber-950/60",
   },
   {
     icon: <FileText className="w-6 h-6 text-cyan-500" />,
     title: "Instant GST Invoicing",
-    description: "Generate official tax-compliant B2B invoices and instant quotation PDFs directly from mobile.",
+    description:
+      "Generate official tax-compliant B2B invoices and instant quotation PDFs directly from mobile.",
     bgColor: "bg-cyan-50 dark:bg-cyan-950/60",
   },
   {
     icon: <Truck className="w-6 h-6 text-emerald-500" />,
     title: "Live Order Tracking",
-    description: "Track doorstep shipments and freight delivery across 10,000+ pin codes in India.",
+    description:
+      "Track doorstep shipments and freight delivery across 10,000+ pin codes in India.",
     bgColor: "bg-emerald-50 dark:bg-emerald-950/60",
   },
   {
     icon: <TrendingUp className="w-6 h-6 text-blue-500" />,
     title: "Vendor Management Portal",
-    description: "Sellers can list products, track customer inquiries, and manage payouts with 0% commission.",
+    description:
+      "Sellers can list products, track customer inquiries, and manage payouts with 0% commission.",
     bgColor: "bg-blue-50 dark:bg-blue-950/60",
   },
 ];
@@ -51,7 +66,6 @@ export default function DownloadPage() {
       {/* Hero Section */}
       <section className="relative w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-cyan-500/10 via-slate-50 to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
         <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
-          
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 dark:bg-cyan-500/20 border border-cyan-500/30 text-[#007b99] dark:text-cyan-400 text-xs font-bold uppercase tracking-wider shadow-sm">
             <Smartphone className="w-4 h-4 text-cyan-500" />
@@ -60,7 +74,7 @@ export default function DownloadPage() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.12]">
-            Solar Procurement & Vendor Management{" "}
+            Solar Procurement &amp; Vendor Management{" "}
             <span className="bg-gradient-to-r from-[#007b99] via-[#015C8F] to-[#f26522] bg-clip-text text-transparent">
               On Your Phone
             </span>
@@ -103,10 +117,9 @@ export default function DownloadPage() {
               <Star className="w-4 h-4 text-amber-400 fill-amber-400" /> 4.9 Rating (10,000+ Downloads)
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-cyan-500" /> Free & Secure
+              <CheckCircle2 className="w-4 h-4 text-cyan-500" /> Free &amp; Secure
             </span>
           </div>
-
         </div>
       </section>
 
