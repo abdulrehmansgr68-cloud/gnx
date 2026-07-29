@@ -121,12 +121,26 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-inter), 'Inter', sans-serif;
-  }
+
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth scroll-pt-16 overscroll-y-none;
     font-family: var(--font-inter), 'Inter', sans-serif;
+    overscroll-behavior: none;
+    overscroll-behavior-y: none;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-clip overscroll-y-none;
+    font-family: var(--font-inter), 'Inter', sans-serif;
+    overscroll-behavior: none;
+    overscroll-behavior-y: none;
+  }
+
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    cursor: pointer;
   }
 }

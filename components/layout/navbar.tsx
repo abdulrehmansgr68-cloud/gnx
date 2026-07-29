@@ -22,7 +22,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 w-full relative bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 before:absolute before:-top-40 before:inset-x-0 before:h-40 before:bg-background dark:before:bg-slate-950 before:pointer-events-none">
         <div className="w-full flex h-16 items-center justify-between">
           {/* Full-height Logo Banner with Slanted Right Edge */}
           <div
@@ -56,11 +56,10 @@ export function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`transition-colors py-1 ${
-                      isActive
-                        ? "text-[#007b99] dark:text-cyan-400 font-extrabold border-b-2 border-[#007b99] dark:border-cyan-400"
-                        : "text-slate-600 dark:text-slate-300 font-medium hover:text-[#007b99] dark:hover:text-cyan-400"
-                    }`}
+                    className={`transition-colors py-1 ${isActive
+                      ? "text-[#007b99] dark:text-cyan-400 font-extrabold border-b-2 border-[#007b99] dark:border-cyan-400"
+                      : "text-slate-600 dark:text-slate-300 font-medium hover:text-[#007b99] dark:hover:text-cyan-400"
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -140,11 +139,10 @@ export function Navbar() {
                       key={link.name}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl font-bold text-sm transition-all ${
-                        isActive
-                          ? "bg-[#007b99]/10 text-[#007b99] dark:text-cyan-400 shadow-xs"
-                          : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80"
-                      }`}
+                      className={`flex items-center justify-between px-4 py-3 rounded-xl font-bold text-sm transition-all ${isActive
+                        ? "bg-[#007b99]/10 text-[#007b99] dark:text-cyan-400 shadow-xs"
+                        : "text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80"
+                        }`}
                     >
                       <span>{link.name}</span>
                       <ChevronRight className="w-4 h-4 opacity-50" />

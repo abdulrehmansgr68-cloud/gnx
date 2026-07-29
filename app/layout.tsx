@@ -89,10 +89,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} font-sans h-full antialiased`}
+      className={`${inter.variable} font-sans antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-screen flex flex-col font-sans overflow-x-clip">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

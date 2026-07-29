@@ -86,6 +86,12 @@ export function ContactForm() {
     message: touched.message ? getMessageError(formData.message) : null,
   };
 
+  const isFormValid =
+    !getFullNameError(formData.fullName) &&
+    !getEmailError(formData.email) &&
+    !getPhoneError(formData.phone) &&
+    !getMessageError(formData.message);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
@@ -343,8 +349,8 @@ export function ContactForm() {
           {/* Submit Button */}
           <Button
             type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-[#007b99] via-[#015C8F] to-[#007b99] hover:opacity-95 text-white font-extrabold rounded-xl h-13 text-base shadow-xl shadow-cyan-500/20 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 mt-2"
+            disabled={isSubmitting || !isFormValid}
+            className="w-full bg-gradient-to-r from-[#007b99] via-[#015C8F] to-[#007b99] hover:opacity-95 text-white font-extrabold rounded-xl h-13 text-base shadow-xl shadow-cyan-500/20 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 mt-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-auto"
           >
             {isSubmitting ? (
               <>
