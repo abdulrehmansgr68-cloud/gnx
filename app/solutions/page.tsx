@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   title: "Intelligent Solar Energy Solutions | GNX Power Solution",
   description:
     "Empowering homes, businesses, and industrial facilities with smart, high-efficiency solar energy systems. Discover Residential, Commercial, Industrial, Turnkey Rooftop Solar, E-Commerce Storefront, End-to-End EPC, O&M, and Smart Energy Consultation.",
+  alternates: {
+    canonical: "/solutions",
+  },
+  openGraph: {
+    title: "Intelligent Solar Energy Solutions | GNX Power Solution",
+    description:
+      "Turnkey solar rooftop EPC, residential, commercial & industrial solar solutions, e-commerce component sourcing, and O&M services.",
+    url: "https://gnxpowersolution.com/solutions",
+    siteName: "GNX Power Solution",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function SolutionsPage() {

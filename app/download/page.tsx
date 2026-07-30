@@ -19,10 +19,17 @@ export const metadata: Metadata = {
   title: "Download App | GNX Power Solution Mobile App",
   description:
     "Download the official GNX Power Solution mobile app on Google Play. Access direct factory pricing on solar panels, generate instant GST invoices, and track live order deliveries.",
+  alternates: {
+    canonical: "/download",
+  },
   openGraph: {
     title: "Download GNX Power Solution Android App",
     description:
       "Order Tier-1 solar equipment, calculate solar capacities, and manage vendor orders directly from your phone.",
+    url: "https://gnxpowersolution.com/download",
+    siteName: "GNX Power Solution",
+    locale: "en_IN",
+    type: "website",
   },
 };
 

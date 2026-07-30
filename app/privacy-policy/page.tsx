@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   title: "Privacy Policy | GNX Power Solution",
   description:
     "Learn how GNX Power Solution collects, uses, and safeguards your information when using our web platform and mobile application.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | GNX Power Solution",
+    description:
+      "Understand how GNX Power Solution safeguards your user and business data across web and mobile platforms.",
+    url: "https://gnxpowersolution.com/privacy-policy",
+    siteName: "GNX Power Solution",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function PrivacyPolicyPage() {

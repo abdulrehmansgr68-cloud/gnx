@@ -11,6 +11,18 @@ export const metadata: Metadata = {
   title: "About Us | GNX Power Solution",
   description:
     "GNX Power Solution is a trusted solar energy company and digital e-commerce platform offering certified solar panels, inverters, batteries, and end-to-end EPC solar solutions across India.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | GNX Power Solution",
+    description:
+      "Learn about GNX Power Solution, India's leading digital platform for solar equipment e-commerce and turnkey rooftop EPC projects.",
+    url: "https://gnxpowersolution.com/about",
+    siteName: "GNX Power Solution",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {

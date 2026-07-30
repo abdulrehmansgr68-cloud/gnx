@@ -18,10 +18,17 @@ export const metadata: Metadata = {
   title: "Contact Us | GNX Power Solution",
   description:
     "Get in touch with GNX Power Solution. Reach out for solar panel inquiries, rooftop EPC quotes, vendor partnerships, or technical support across India.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact Us | GNX Power Solution",
     description:
       "Have questions about solar products or vendor partnerships? Contact GNX Power Solution experts today.",
+    url: "https://gnxpowersolution.com/contact",
+    siteName: "GNX Power Solution",
+    locale: "en_IN",
+    type: "website",
   },
 };
 

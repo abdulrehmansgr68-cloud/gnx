@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/hero/hero-section";
 import { MissionVisionSection } from "@/components/about/mission-vision-section";
 import { TeamSection } from "@/components/about/team-section";
@@ -8,6 +9,39 @@ import { FinancingSubsidiesSection } from "@/components/home-sections/financing-
 import { B2bSection } from "@/components/home-sections/b2b-section";
 import { FaqSection } from "@/components/faq/faq-section";
 import { CtaSection } from "@/components/cta/cta-section";
+
+export const metadata: Metadata = {
+  title: "GNX Power Solution | Solar Products, EPC & Vendor Platform",
+  description:
+    "Buy certified Tier-1 solar products online & sell as a verified vendor. End-to-end solar rooftop EPC, inverters, batteries, and turn-key solar energy solutions across India.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "GNX Power Solution | Solar Products & Rooftop EPC Platform",
+    description:
+      "Buy certified Tier-1 solar panels, hybrid inverters, lithium batteries, and access turnkey solar rooftop EPC solutions across India.",
+    url: "https://gnxpowersolution.com",
+    siteName: "GNX Power Solution",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/a48f81da641c9fd51bd6eb1f3d33c5e14f5c7087.png",
+        width: 1200,
+        height: 630,
+        alt: "GNX Power Solution Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GNX Power Solution | Solar Products & Rooftop EPC Platform",
+    description:
+      "Certified solar panels, hybrid inverters, lithium batteries, and EPC rooftop solar solutions across India.",
+    images: ["/a48f81da641c9fd51bd6eb1f3d33c5e14f5c7087.png"],
+  },
+};
 
 export default function Home() {
   return (
